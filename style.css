@@ -210,3 +210,56 @@ footer {
   color: #ffb400;
   text-shadow: 0 0 10px #ffb400;
 }
+/* 🌟 NAVIGATION BAR STYLE 🌟 */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(255, 180, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.navbar .logo span {
+  color: #ffb400;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-links li a {
+  color: #ffb400;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-links li a:hover,
+.navbar .nav-links li a.active {
+  color: #fff;
+  text-shadow: 0 0 10px #ffb400;
+}
