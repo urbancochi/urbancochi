@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Urban Cochi — Gallery</title>
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+
+  <!-- camera flash intro -->
+  <div id="flashIntro" class="flash-intro">
+    <div class="flash"></div>
+    <div class="flash-content">
+      <img src="logo.png" alt="logo" />
+      <h1>Visual Stories</h1>
+      <p>Our work — uniforms, prints, and bespoke pieces</p>
+      <button id="enterGallery" class="enter-btn">Enter Gallery</button>
+    </div>
+  </div>
+
+  <!-- main gallery -->
+  <main id="galleryMain" class="hidden">
+    <nav class="nav">
+      <a href="index.html"><img src="logo.png" alt="logo" /></a>
+      <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="custom.html">Custom</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <section class="grid">
+      <!-- add or remove images as you like -->
+      <figure><img src="product1.jpg" alt="" /><figcaption>Custom Printed Tee</figcaption></figure>
+      <figure><img src="product2.png" alt="" /><figcaption>Exclusive T-shirt</figcaption></figure>
+      <figure><img src="product3.png" alt="" /><figcaption>Corporate Uniform</figcaption></figure>
+      <!-- you can add more images -->
+    </section>
+
+    <!-- lightbox -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button id="lbClose" class="lb-close">✕</button>
+      <img id="lbImg" src="" alt="enlarged"/>
+      <p id="lbCaption"></p>
+    </div>
+
+    <footer class="foot">
+      <a href="index.html" class="back-btn">← Back to Home</a>
+    </footer>
+  </main>
+
+  <script src="gallery.js"></script>
+</body>
+</html>
