@@ -159,108 +159,94 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 
 }
-/* 🌟 Urban Cochi Navigation Bar */
+/* --- NEW PROFESSIONAL NAVBAR --- */
 .navbar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background: #000;
-  box-shadow: 0 0 20px rgba(255, 191, 0, 0.4);
-  z-index: 1000;
-}
-
-.nav-container {
-  max-width: 1200px;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 25px;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
 }
 
-.brand {
+.logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.brand-logo {
-  width: 48px;
-  height: 48px;
+.logo img {
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(255, 191, 0, 0.4);
+  box-shadow: 0 0 10px gold;
 }
 
-.brand-name {
-  color: #ffb400;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+.logo h1 {
+  color: gold;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-/* 🔸 Menu Links */
-.nav-menu {
+.nav-links {
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
-.nav-menu a {
+.nav-links a {
+  color: white;
   text-decoration: none;
-  color: #ffb400;
   font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  font-size: 15px;
+  transition: 0.3s;
 }
 
-.nav-menu a:hover {
-  background: #ffb400;
-  color: #000;
-  box-shadow: 0 0 12px #ffb400;
+.nav-links a:hover {
+  color: gold;
+  text-shadow: 0 0 10px gold;
 }
 
-.nav-menu a.active {
-  background: #ffb400;
-  color: #000;
-  box-shadow: 0 0 15px #ffb400;
-}
-
-/* 🍔 Mobile Toggle */
 .menu-toggle {
   display: none;
   font-size: 28px;
-  color: #ffb400;
+  color: gold;
   cursor: pointer;
 }
 
-/* 📱 Responsive Design */
+/* --- MOBILE VIEW --- */
 @media (max-width: 768px) {
-  .nav-menu {
+  .nav-links {
     display: none;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.95);
     position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
-    border-left: 2px solid #ffb400;
-    border-bottom: 2px solid #ffb400;
-    box-shadow: 0 0 15px rgba(255, 191, 0, 0.4);
+    top: 60px;
+    right: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 15px gold;
   }
 
-  .nav-menu a {
-    padding: 12px 18px;
-    border-bottom: 1px solid rgba(255, 191, 0, 0.2);
-  }
-
-  .nav-menu.show {
+  .nav-links.active {
     display: flex;
+    animation: slideDown 0.3s ease;
   }
 
   .menu-toggle {
     display: block;
   }
+
+  @keyframes slideDown {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
 }
+
 
 
 
