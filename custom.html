@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Urban Cochi — Custom Designs</title>
+  <link rel="stylesheet" href="custom.css" />
+</head>
+<body>
+
+  <!-- seam-draw intro -->
+  <div id="seam-intro" class="seam-intro">
+    <svg class="seam-svg" viewBox="0 0 800 120" preserveAspectRatio="xMidYMid meet">
+      <path id="seamPath" d="M20,60 C200,0 400,120 780,60" stroke="#ffcc33" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </svg>
+    <div class="seam-content">
+      <img src="logo.png" alt="Urban Cochi logo" />
+      <h1>Design Your Vision</h1>
+      <p>Custom garments — tell us your idea and we'll make it reality</p>
+      <button id="enterBtn" class="enter-btn">Start Designing</button>
+    </div>
+  </div>
+
+  <!-- main custom form -->
+  <main id="customMain" class="hidden">
+    <nav class="nav">
+      <a href="index.html" class="nav-left"><img src="logo.png" alt="logo" /></a>
+      <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <section class="designer">
+      <h2>Custom Design Request</h2>
+      <p class="lead">Fill details below — attach reference images and our team will contact you.</p>
+
+      <form id="customForm" class="form" enctype="multipart/form-data">
+        <label>
+          Your name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Phone number
+          <input type="tel" name="phone" placeholder="+91..." required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" />
+        </label>
+
+        <label>
+          Product type
+          <select name="product">
+            <option>Printed T-shirt</option>
+            <option>Exclusive T-shirt</option>
+            <option>Chef Coat</option>
+            <option>Corporate Uniform</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label>
+          Describe your idea
+          <textarea name="notes" rows="4" placeholder="Colors, text, placement, sizes..."></textarea>
+        </label>
+
+        <label class="file-label">
+          Upload reference image
+          <input type="file" name="refImage" accept="image/*" />
+          <span class="file-hint">PNG / JPG (max 8MB)</span>
+        </label>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Send Request</button>
+          <a class="btn ghost" href="https://wa.me/917306316859?text=Hi%20Urban%20Cochi%2C%20I%20want%20a%20custom%20design" target="_blank">Enquire on WhatsApp</a>
+        </div>
+
+        <p class="privacy">We will contact you — your details are safe with us.</p>
+      </form>
+    </section>
+  </main>
+
+  <script src="custom.js"></script>
+</body>
+</html>
