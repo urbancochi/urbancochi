@@ -1,294 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Urban Cochi</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #0a0a0a;
-      color: #f5f5f5;
-      text-align: center;
-      overflow-x: hidden;
-    }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    /* --- ANIMATIONS --- */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes glow {
-      0% { text-shadow: 0 0 5px #ffb400, 0 0 10px #ffb400; }
-      50% { text-shadow: 0 0 20px #ffb400, 0 0 30px #ffb4…
-[2:23 pm, 2/11/2025] Aswin: <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Urban Cochi</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #0a0a0a;
-      color: #f5f5f5;
-      text-align: center;
-      overflow-x: hidden;
-    }
-
-    /* --- ANIMATIONS --- */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes logoZoom {
-      0% { opacity: 0; transform: scale(0.7); }
-      100% { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes glow {
-      0% { text-shadow: 0 0 5px #ffb400, 0 0 10px #ffb400; }
-      50% { text-shadow: 0 0 20px #ffb400, 0 0 30px #ffb400; }
-      100% { text-shadow: 0 0 5px #ffb400, 0 0 10px #ffb400; }
-    }
-
-    @keyframes slideUp {
-      0% { opacity: 0; transform: translateY(40px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    /* --- HEADER --- */
-    header {
-      background: linear-gradient(180deg, #000 60%, #1a1a1a 100%);
-      padding: 80px 20px 50px;
-    }
-
-    header img {
-      width: 200px;
-      border-radius: 25px;
-      box-shadow: 0 0 25px rgba(255, 180, 0, 0.5);
-      animation: logoZoom 2.5s ease-in-out;
-    }
-
-    h1 {
-      margin-top: 25px;
-      font-size: 2.7rem;
-      letter-spacing: 3px;
-      animation: glow 3s infinite ease-in-out, fadeIn 2s ease forwards;
-    }
-
-    h2 {
-      color: #ffb400;
-      margin-top: 10px;
-      font-size: 1.6rem;
-      opacity: 0;
-      animation: slideUp 1.8s ease forwards;
-      animation-delay: 1s;
-    }
-
-    p.tagline {
-      font-size: 1.1rem;
-      color: #ccc;
-      margin-top: 10px;
-      opacity: 0;
-      animation: slideUp 2s ease forwards;
-      animation-delay: 1.5s;
-    }
-
-    /* --- SECTIONS --- */
-    section {
-      background-color: #fff;
-      color: #222;
-      margin: 70px auto;
-      width: 90%;
-      max-width: 800px;
-      border-radius: 20px;
-      padding: 40px 25px;
-      box-shadow: 0 0 25px rgba(255, 180, 0, 0.2);
-      animation: fadeIn 2s ease forwards;
-      transition: transform 0.3s ease;
-    }
-
-    section:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 40px rgba(255, 180, 0, 0.4);
-    }
-
-    section h2 {
-      color: #ffb400;
-      font-size: 1.8rem;
-    }
-
-    section p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    /* --- CONTACT --- */
-    .contact {
-      background-color: #000;
-      color: #f5f5f5;
-      padding: 40px 25px;
-      border-radius: 20px;
-      box-shadow: 0 0 25px rgba(255, 180, 0, 0.3);
-      margin-bottom: 60px;
-      animation: fadeIn 2s ease forwards;
-    }
-
-    .contact a {
-      color: #ffb400;
-      text-decoration: none;
-      transition: color 0.3s ease, text-shadow 0.3s ease;
-    }
-
-    .contact a:hover {
-      color: #fff;
-      text-shadow: 0 0 10px #ffb400;
-    }
-
-    .contact p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-    }
-
-    /* --- FOOTER --- */
-    footer {
-      background: #000;
-      padding: 15px 0;
-      font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid #222;
-      animation: fadeIn 3s ease forwards;
-    }
-  </style>
-</head>
-<body>
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-  background: radial-gradient(circle at center, #000000 40%, #1a1a1a 100%);
-  animation: fadeIn 2s ease-in-out;
-}
-
-.logo {
-  width: 120px;
-  height: auto;
-  margin-bottom: 20px;
-  animation: floatLogo 3s ease-in-out infinite alternate;
-}
-
-.glow-text {
-  font-size: 3rem;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
   color: #fff;
-  text-shadow: 0 0 10px #ffb300, 0 0 20px #ffcc33;
-  animation: glow 2s ease-in-out infinite alternate;
+  overflow-x: hidden;
 }
 
-.tagline {
-  color: #ffcc33;
-  font-size: 1.2rem;
+/* --- CINEMATIC INTRO --- */
+#intro {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(circle at center, #000 60%, #111);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeOut 1.5s ease forwards;
+  animation-delay: 4.5s;
+  z-index: 10;
+}
+
+.intro-logo {
+  width: 150px;
+  opacity: 0;
+  animation: logoFade 2s ease forwards;
+}
+
+.intro-text {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  color: #ffb400;
+  text-shadow: 0 0 15px #ffb400;
+  opacity: 0;
+  animation: textFade 3s ease forwards 1s;
+}
+
+.intro-tagline {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #ccc;
+  opacity: 0;
+  animation: taglineFade 3s ease forwards 2s;
+}
+
+/* --- MAIN CONTENT --- */
+.hidden {
+  display: none;
+}
+
+header {
+  text-align: center;
+  padding: 70px 20px 40px;
+  background: linear-gradient(180deg, #0a0a0a 40%, #1a1a1a);
+  animation: fadeIn 2s ease forwards 5s;
+}
+
+header .logo {
+  width: 160px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px rgba(255, 180, 0, 0.5);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-top: 20px;
+  color: #ffb400;
+  text-shadow: 0 0 20px #ffb400;
+}
+
+header h2 {
+  color: #fff;
   margin-top: 10px;
-  letter-spacing: 1px;
+  font-weight: 500;
 }
 
-@keyframes glow {
-  from { text-shadow: 0 0 10px #ffb300; }
-  to { text-shadow: 0 0 25px #ffcc33; }
+header .concept {
+  margin-top: 15px;
+  color: #ccc;
+  font-size: 1rem;
 }
 
-@keyframes fadeIn {
+/* --- SECTION STYLES --- */
+section {
+  width: 85%;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 25px rgba(255, 180, 0, 0.3);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 2s ease forwards 6s;
+}
+
+section:hover {
+  transform: scale(1.02);
+  transition: 0.3s ease;
+}
+
+section h2 {
+  color: #ffb400;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+section p {
+  color: #eee;
+  line-height: 1.7;
+}
+
+a {
+  color: #ffb400;
+  text-decoration: none;
+}
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #ffb400;
+}
+
+/* --- FOOTER --- */
+footer {
+  background: #000;
+  color: #888;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #222;
+  margin-top: 50px;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes logoFade {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes textFade {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes floatLogo {
-  from { transform: translateY(0); }
-  to { transform: translateY(-10px); }
+@keyframes taglineFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
-  <header>
-    <img src="logo.png" alt="Urban Cochi Logo">
-    <h1>URBAN COCHI</h1>
-    <h2>Where Every Thread Has a Story</h2>
-    <p class="tagline">We provide complete clothing solutions — from fabric to fashion, from design to delivery.</p>
-  </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>
-      We are an all-in-one apparel solution company offering end-to-end services for everything related to clothing.
-      From customized designs, uniforms, and accessories to garment production, fabric sourcing, and equipment consulting —
-      we deliver complete solutions for fashion, hospitality, and lifestyle brands.
-    </p>
-  </section>
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
 
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>We’d love to hear from you!</p>
-    <p>📞 <a href="tel:7306316859">7306316859</a> | <a href="tel:9061397002">9061397002</a></p>
-    <p>📧 <a href="mailto:theurbankochi@gmail.com">theurbankochi@gmail.com</a></p>
-    <p>📸 <a href="https://instagram.com/urbancochi" target="_blank">@urbancochi</a></p>
-  </section>
-
-  <footer>
-    © 2025 Urban Cochi. All rights reserved.
-  </footer><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Urban Cochi</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Cinematic Intro Section -->
-  <div class="intro">
-    <div class="intro-content">
-      <img src="urbancochi-logo.jpg" alt="Urban Cochi Logo" class="intro-logo" />
-      <h1 class="intro-title">URBAN COCHI</h1>
-      <p class="intro-tagline">Where Every Thread Has a Story</p>
-    </div>
-  </div>
-
-  <!-- Main Content -->
-  <section class="main-content" id="main">
-    <header class="header">
-      <img src="urbancochi-logo.jpg" alt="Urban Cochi Logo" class="logo" />
-      <h1>URBAN COCHI</h1>
-      <p>Where Every Thread Has a Story</p>
-    </header>
-
-    <section class="about">
-      <h2>About Us</h2>
-      <p>
-        We are an all-in-one apparel solution company offering end-to-end services
-        for everything related to clothing. From customized designs, uniforms, and
-        accessories to garment production, fabric sourcing, and equipment consulting —
-        we deliver complete solutions for fashion, hospitality, and lifestyle brands.
-      </p>
-    </section>
-  </section>
-
-  <script>
-    // Intro Animation
-    setTimeout(() => {
-      document.querySelector('.intro').classList.add('fade-out');
-    }, 3500);
-  </script>
-</body>
-</html>
-
-
-
-
-</body>
-
-</html>
-
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
