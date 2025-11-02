@@ -72,3 +72,11 @@ footer {
   padding: 10px;
   font-size: 0.9rem;
 }
+/* Logo Styling */
+.logo {
+  display: block;
+  margin: 30px auto;
+  width: 200px;        /* Adjust logo size */
+  height: auto;
+  border-radius: 20px; /* Optional soft edges */
+}
