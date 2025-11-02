@@ -90,4 +90,31 @@ footer {
   font-weight: 500;
   margin-bottom: 15px;
 }
+/* ---------- Contact Section ---------- */
+.contact {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #ffb400;
+}
+
+.contact p {
+  font-size: 1.1em;
+  margin: 8px 0;
+}
+
+.contact a {
+  color: #ffb400;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
 
