@@ -1,92 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Urban Cochi</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="navbar">
-  <div class="logo">
-    <img src="logo.png" alt="Urban Cochi Logo">
-    <h1>URBAN COCHI</h1>
-  </div>
 
-  <!-- Hamburger menu icon (for mobile) -->
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-  <!-- Navigation links -->
-  <nav class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="custom.html">Custom Designs</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-  </div>
-</header>
-  <!-- CINEMATIC INTRO -->
-  <div id="intro">
-    <img src="logo.png" alt="Urban Cochi Logo" class="intro-logo">
-    <h1 class="intro-text">URBAN COCHI</h1>
-    <p class="intro-tagline">Where Every Thread Has a Story</p>
-  </div>
-
-  <!-- MAIN CONTENT -->
-  <div id="main-content" class="hidden">
-    <header>
-      <img src="logo.png" alt="Urban Cochi Logo" class="logo">
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Urban Cochi Logo" class="logo-img" />
       <h1>URBAN COCHI</h1>
-      <h2>Where Every Thread Has a Story</h2>
-      <p class="concept">We provide complete clothing solutions — from fabric to fashion, from design to delivery.</p>
-    </header>
+    </div>
 
-    <section class="about">
-      <h2>About Us</h2>
-      <p>
-        We are an all-in-one apparel solution company offering end-to-end services for everything related to clothing.
-        From customized designs, uniforms, and accessories to garment production, fabric sourcing, and equipment consulting —
-        we deliver complete solutions for fashion, hospitality, and lifestyle brands.
-      </p>
-    </section>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-    <section class="contact">
-      <h2>Contact Us</h2>
-      <p>We’d love to hear from you!</p>
-      <p>📞 <a href="tel:7306316859">7306316859</a> | <a href="tel:9061397002">9061397002</a></p>
-      <p>📧 <a href="mailto:theurbankochi@gmail.com">theurbankochi@gmail.com</a></p>
-      <p>📸 <a href="https://instagram.com/urbancochi" target="_blank">@urbancochi</a></p>
-    </section>
-    <footer>
-      © 2025 Urban Cochi. All rights reserved.
-    </footer>
-  </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="custom.html">Custom Designs</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <script src="script.js"></script>
+  <!-- CINEMATIC INTRO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2 class="fade-in">🎬 URBAN COCHI</h2>
+      <p class="fade-in delay-1">The Clothing Story of Life 👕👔</p>
+      <p class="fade-in delay-2">From newborn romper 👶 to CEO suit 💼 — style never dies 😎</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about fade-in">
+    <h3>About Us</h3>
+    <p>Urban Cochi is your all-in-one clothing destination — we design, print, and craft outfits that define individuality and professionalism. From uniforms to custom streetwear, we bring imagination to life.</p>
+  </section>
+
+  <!-- EXPLORE -->
+  <section class="explore cinematic-section">
+    <h2>Explore Our World</h2>
+    <div class="explore-boxes">
+      <a href="products.html" class="box">
+        <h3>👕 Products</h3>
+        <p>Explore our trendy ready-made collections crafted with precision.</p>
+      </a>
+      <a href="custom.html" class="box">
+        <h3>🎨 Custom Designs</h3>
+        <p>Design your dream outfit — we’ll bring it to life, stitch by stitch.</p>
+      </a>
+      <a href="gallery.html" class="box">
+        <h3>🖼️ Gallery</h3>
+        <p>Take a look at our creative projects and customer favorites.</p>
+      </a>
+      <a href="contact.html" class="box">
+        <h3>📞 Contact</h3>
+        <p>Let’s create something amazing together. Reach out today!</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Urban Cochi | Designed with ❤️ by Urban Cochi Team</p>
+  </footer>
+
+  <!-- SCRIPT -->
   <script>
-  // Menu toggle (for mobile)
-  const toggle = document.getElementById("menu-toggle");
-  const menu = document.getElementById("nav-menu");
+    // Menu toggle
+    function toggleMenu() {
+      const navLinks = document.querySelector(".nav-links");
+      navLinks.classList.toggle("active");
+    }
 
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("show");
-  });
-</script>
+    // Scroll fade animation
+    const fadeElements = document.querySelectorAll(".fade-in, .cinematic-section");
+    window.addEventListener("scroll", () => {
+      fadeElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.8) {
+          el.classList.add("visible");
+        }
+      });
+    });
+  </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
