@@ -246,6 +246,27 @@ footer {
     to { transform: translateY(0); opacity: 1; }
   }
 }
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background-color: #000; /* same background color */
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  font-size: 25px;
+  color: #ffcc00; /* your glowing yellow */
+}
+
 
 
 
