@@ -5,32 +5,6 @@ body {
   background-color: #f7f7f7;
   text-align: center;
 }
-
-.hero {
-  background: linear-gradient(135deg, #000000, #444444);
-  color: white;
-  padding: 80px 20px;
-}
-.hero {
-  background: linear-gradient(to bottom right, #111, #333);
-  padding: 60px 20px;
-  text-align: center;
-  color: white;
-}
-.hero h1 {
-  font-size: 2.5em;
-  letter-spacing: 2px;
-}
-.hero h2 {
-  color: #ffb400; /* Golden tagline color */
-  margin-top: 10px;
-}
-.logo {
-  width: 120px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
 h1 {
   font-size: 2.5rem;
   margin: 10px 0;
@@ -85,27 +59,35 @@ footer {
   padding: 10px;
   font-size: 0.9rem;
 }
-/* Logo Styling */
+/* ---------- Logo ---------- */
 .logo {
   display: block;
-  margin: 30px auto;
-  width: 200px;        /* Adjust logo size */
+  margin: 50px auto 20px auto;
+  width: 300px;
+  max-width: 90%;
   height: auto;
-  border-radius: 20px; /* Optional soft edges */
+  border-radius: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
-/* Logo Styling */
-.logo {
-  display: block;
-  margin: 40px auto 10px auto; /* top, right, bottom, left */
-  width: 250px;   /* Increase for better visibility */
-  max-width: 80%;
-  height: auto;
-  border-radius: 20px;
+
+/* ---------- Hero Section ---------- */
+.hero {
+  background: linear-gradient(180deg, #111, #000);
+  text-align: center;
+  padding: 70px 20px 50px 20px;
+  color: white;
 }
-.logo {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+.hero h1 {
+  font-size: 2.8em;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
-header {
-  background: linear-gradient(180deg, #1c1c1c, #000);
-  padding-bottom: 40px;
+
+.hero h2 {
+  font-size: 1.3em;
+  color: #ffb400;
+  font-weight: 500;
+  margin-bottom: 15px;
 }
+
