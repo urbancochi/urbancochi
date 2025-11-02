@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Urban Cochi</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>URBAN COCHI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo">
-      <img src="logo.png" alt="Urban Cochi Logo" class="logo-img" />
-      <h1>URBAN COCHI</h1>
+      <img src="logo.png" alt="URBAN COCHI Logo" class="logo-img" />
+      <div class="brand">
+        <span class="brand-title">URBAN COCHI</span>
+        <span class="brand-tag">Where Every Thread Has a Story</span>
+      </div>
     </div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="menu-toggle" aria-label="menu" onclick="toggleMenu()">☰</div>
 
     <nav>
       <ul class="nav-links">
@@ -28,67 +32,133 @@
     </nav>
   </header>
 
-  <!-- CINEMATIC INTRO -->
+  <!-- HERO with glowing threads -->
   <section class="hero">
+    <!-- animated threads SVG -->
+    <svg class="threads" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="g1" x1="0" x2="1">
+          <stop offset="0" stop-color="#ffdf7a" stop-opacity="0.9"/>
+          <stop offset="1" stop-color="#ffd100" stop-opacity="0.6"/>
+        </linearGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+          <feMerge>
+            <feMergeNode in="coloredBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+
+      <!-- multiple paths for strong cinematic motion -->
+      <path class="thread t1" d="M0,250 C200,100 400,100 600,200 C800,320 1000,320 1200,220" stroke="url(#g1)" stroke-width="4" fill="none" filter="url(#glow)"/>
+      <path class="thread t2" d="M0,300 C150,200 350,180 580,230 C820,290 1000,280 1200,240" stroke="url(#g1)" stroke-width="3" fill="none" filter="url(#glow)"/>
+      <path class="thread t3" d="M0,200 C180,40 420,40 610,170 C820,320 980,320 1200,200" stroke="url(#g1)" stroke-width="2.5" fill="none" filter="url(#glow)"/>
+    </svg>
+
     <div class="hero-content">
-      <h2 class="fade-in">🎬 URBAN COCHI</h2>
-      <p class="fade-in delay-1">The Clothing Story of Life 👕👔</p>
-      <p class="fade-in delay-2">From newborn romper 👶 to CEO suit 💼 — style never dies 😎</p>
+      <img src="logo.png" alt="URBAN COCHI logo" class="hero-logo fade-in" />
+      <h1 class="hero-title fade-in delay-1">URBAN COCHI</h1>
+      <p class="hero-sub fade-in delay-2">Where Every Thread Has a Story</p>
+      <div class="hero-cta fade-in delay-3">
+        <a href="products.html" class="btn">Explore Products</a>
+        <a href="custom.html" class="btn btn-outline">Custom Designs</a>
+      </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about fade-in">
-    <h3>About Us</h3>
-    <p>Urban Cochi is your all-in-one clothing destination — we design, print, and craft outfits that define individuality and professionalism. From uniforms to custom streetwear, we bring imagination to life.</p>
-  </section>
-
-  <!-- EXPLORE -->
-  <section class="explore cinematic-section">
-    <h2>Explore Our World</h2>
-    <div class="explore-boxes">
-      <a href="products.html" class="box">
-        <h3>👕 Products</h3>
-        <p>Explore our trendy ready-made collections crafted with precision.</p>
-      </a>
-      <a href="custom.html" class="box">
-        <h3>🎨 Custom Designs</h3>
-        <p>Design your dream outfit — we’ll bring it to life, stitch by stitch.</p>
-      </a>
-      <a href="gallery.html" class="box">
-        <h3>🖼️ Gallery</h3>
-        <p>Take a look at our creative projects and customer favorites.</p>
-      </a>
-      <a href="contact.html" class="box">
-        <h3>📞 Contact</h3>
-        <p>Let’s create something amazing together. Reach out today!</p>
-      </a>
+  <!-- ABOUT (short; full about can be on a separate page) -->
+  <section class="about cinematic">
+    <div class="container">
+      <h2>About URBAN COCHI</h2>
+      <p>
+        URBAN COCHI is an end-to-end clothing studio — from design and fabric sourcing to printing and delivery.
+        We craft uniforms, custom wear, and creative collections with precision. Your idea → our hands.
+      </p>
+      <div class="about-line" aria-hidden="true"></div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Urban Cochi | Designed with ❤️ by Urban Cochi Team</p>
+  <!-- EXPLORE (4 glowing boxes) -->
+  <section class="explore cinematic">
+    <div class="container">
+      <h2>Explore Our World</h2>
+
+      <div class="explore-boxes">
+        <a class="box" href="products.html">
+          <div class="box-icon">👕</div>
+          <h3>Products</h3>
+          <p>Ready-made collections — modern, durable, stylish.</p>
+        </a>
+
+        <a class="box" href="custom.html">
+          <div class="box-icon">🎨</div>
+          <h3>Custom Designs</h3>
+          <p>Bring your design — we’ll stitch and print it to life.</p>
+        </a>
+
+        <a class="box" href="gallery.html">
+          <div class="box-icon">🖼️</div>
+          <h3>Gallery</h3>
+          <p>Real work, real customers — browse our portfolio.</p>
+        </a>
+
+        <a class="box" href="contact.html">
+          <div class="box-icon">📞</div>
+          <h3>Contact</h3>
+          <p>Questions? Orders? Let’s talk — reach out to our team.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER with social icons -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-left">
+        <img src="logo.png" alt="URBAN COCHI" class="footer-logo" />
+        <p class="small">© <span id="year"></span> URBAN COCHI · All rights reserved</p>
+      </div>
+
+      <div class="footer-right">
+        <div class="socials">
+          <a href="https://instagram.com/urbancochi" target="_blank" rel="noopener" aria-label="Instagram" class="social">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="mailto:theurbankochi@gmail.com" aria-label="Email" class="social">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="tel:+917306316859" aria-label="Call" class="social">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M22 16.92V21a1 1 0 0 1-1.11 1 19.86 19.86 0 0 1-8.63-3.11 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.06 3.11 1 1 0 0 1 3 2h4.09a1 1 0 0 1 1 .75c.12.68.3 1.37.56 2a1 1 0 0 1-.24 1.02L7.7 8.7a16 16 0 0 0 6 6l1.92-1.92a1 1 0 0 1 1.02-.24c.63.26 1.32.44 2 .56a1 1 0 0 1 .75 1V21z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <p class="small">Phone: <a href="tel:+917306316859">+91 73063 16859</a></p>
+      </div>
+    </div>
   </footer>
 
-  <!-- SCRIPT -->
+  <!-- SCRIPTS -->
   <script>
-    // Menu toggle
+    // menu toggle
     function toggleMenu() {
-      const navLinks = document.querySelector(".nav-links");
-      navLinks.classList.toggle("active");
+      document.querySelector('.nav-links').classList.toggle('active');
     }
 
-    // Scroll fade animation
-    const fadeElements = document.querySelectorAll(".fade-in, .cinematic-section");
-    window.addEventListener("scroll", () => {
-      fadeElements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight * 0.8) {
-          el.classList.add("visible");
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // IntersectionObserver for cinematic fade-in
+    const io = new IntersectionObserver((items) => {
+      items.forEach(item => {
+        if (item.isIntersecting) {
+          item.target.classList.add('visible');
+          io.unobserve(item.target);
         }
       });
-    });
+    }, {threshold: 0.15});
+
+    document.querySelectorAll('.cinematic, .fade-in, .box').forEach(el => io.observe(el));
   </script>
+
 </body>
 </html>
