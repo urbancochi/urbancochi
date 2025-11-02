@@ -171,7 +171,48 @@
   </style>
 </head>
 <body>
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: radial-gradient(circle at center, #000000 40%, #1a1a1a 100%);
+  animation: fadeIn 2s ease-in-out;
+}
 
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: floatLogo 3s ease-in-out infinite alternate;
+}
+
+.glow-text {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 10px #ffb300, 0 0 20px #ffcc33;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.tagline {
+  color: #ffcc33;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ffb300; }
+  to { text-shadow: 0 0 25px #ffcc33; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatLogo {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
   <header>
     <img src="logo.png" alt="Urban Cochi Logo">
     <h1>URBAN COCHI</h1>
@@ -201,4 +242,5 @@
   </footer>
 
 </body>
+
 </html>
