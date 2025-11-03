@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://urbancochi.github.io/urbancochi/sitemap.xml
