@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ✅ SEO Meta Tags -->
+  <!-- ✅ BASIC SEO -->
   <title>Urban Cochi | Premium Custom Clothing Brand in Kochi</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Urban Cochi is a premium custom clothing and design studio from Kochi, Kerala. We create designer wear, uniforms, and artistic fashion stitched to perfection. You imagine, we create.">
-  <meta name="keywords" content="Urban Cochi, Urban Kochi, clothing brand in Kochi, Kerala fashion, custom uniforms, designer wear, printed T-shirts, Urban Cochi Kochi, custom fashion studio">
+  <meta name="description" content="Urban Cochi is a premium custom clothing and design studio from Kochi, Kerala. We specialize in custom uniforms, designer wear, and unique fashion creations that blend craftsmanship with art.">
+  <meta name="keywords" content="Urban Cochi, Urban Kochi, Custom Clothing Kochi, Kerala fashion, clothing brand in Kochi, designer wear, uniforms, Urban Cochi studio, Urban Cochi Kerala">
   <meta name="author" content="Urban Cochi">
   <meta name="robots" content="index, follow">
-
-  <!-- ✅ Google Site Verification -->
   <meta name="google-site-verification" content="TcVqPRK4bRNlkF-Pp1hgvJNsPGEug-DMktkbAXR25p0" />
 
-  <!-- ✅ Open Graph / Social Sharing -->
+  <!-- ✅ Open Graph / Facebook / Pinterest -->
   <meta property="og:title" content="Urban Cochi | Premium Custom Clothing Brand in Kochi">
-  <meta property="og:description" content="Explore Urban Cochi — a premium custom clothing and design studio from Kochi. You imagine, we create.">
+  <meta property="og:description" content="Explore Urban Cochi — a premium custom clothing and design studio from Kochi, Kerala. You imagine, we create.">
   <meta property="og:image" content="https://urbancochi.github.io/urbancochi/logo.png">
   <meta property="og:url" content="https://urbancochi.github.io/urbancochi/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Urban Cochi">
 
-  <!-- ✅ Structured Data for Google Knowledge Panel & Social Profiles -->
+  <!-- ✅ Twitter / Instagram Sharing -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Urban Cochi | Premium Custom Clothing Brand in Kochi">
+  <meta name="twitter:description" content="Urban Cochi — a custom fashion studio from Kochi blending creativity and craftsmanship.">
+  <meta name="twitter:image" content="https://urbancochi.github.io/urbancochi/logo.png">
+
+  <!-- ✅ Pinterest Rich Pin -->
+  <meta name="pinterest-rich-pin" content="true">
+
+  <!-- ✅ Social Profile Links -->
+  <link rel="me" href="https://www.instagram.com/urbancochi/" />
+  <link rel="me" href="https://www.youtube.com/@UrbanKochi" />
+  <link rel="me" href="https://in.pinterest.com/urbancochi/" />
+  <link rel="me" href="https://urbancochi.blogspot.com/" />
+
+  <!-- ✅ Schema Markup for Google Knowledge Graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "ClothingStore",
     "name": "Urban Cochi",
     "url": "https://urbancochi.github.io/urbancochi/",
     "logo": "https://urbancochi.github.io/urbancochi/logo.png",
+    "image": "https://urbancochi.github.io/urbancochi/logo.png",
+    "description": "Urban Cochi is a premium custom clothing and design studio from Kochi, Kerala. We create unique uniforms, fashion wear, and artistic designs crafted with perfection.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kochi",
+      "addressRegion": "Kerala",
+      "addressCountry": "India"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-0000000000",
+      "contactType": "Customer Service"
+    },
     "sameAs": [
       "https://www.instagram.com/urbancochi/",
       "https://www.youtube.com/@UrbanKochi",
@@ -40,19 +67,22 @@
   <!-- ✅ Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" href="https://urbancochi.github.io/urbancochi/logo.png">
 </head>
 
 <body>
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo">
-      <img src="logo.png" alt="URBAN COCHI Logo" class="logo-img" />
+      <img src="logo.png" alt="Urban Cochi Logo" class="logo-img" />
       <div class="brand">
         <span class="brand-title">URBAN COCHI</span>
         <span class="brand-tag">Where Every Thread Has a Story</span>
       </div>
     </div>
-    <div class="menu-toggle" aria-label="menu" onclick="toggleMenu()">☰</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
@@ -66,7 +96,7 @@
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <svg class="threads" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+    <svg class="threads" viewBox="0 0 1200 400" preserveAspectRatio="none">
       <defs>
         <linearGradient id="g1" x1="0" x2="1">
           <stop offset="0" stop-color="#ffdf7a" stop-opacity="0.9"/>
@@ -74,10 +104,7 @@
         </linearGradient>
         <filter id="glow">
           <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
-          <feMerge>
-            <feMergeNode in="coloredBlur"/>
-            <feMergeNode in="SourceGraphic"/>
-          </feMerge>
+          <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
         </filter>
       </defs>
       <path class="thread t1" d="M0,250 C200,100 400,100 600,200 C800,320 1000,320 1200,220" stroke="url(#g1)" stroke-width="4" fill="none" filter="url(#glow)"/>
@@ -86,7 +113,7 @@
     </svg>
 
     <div class="hero-content">
-      <img src="logo.png" alt="URBAN COCHI logo" class="hero-logo fade-in" />
+      <img src="logo.png" alt="Urban Cochi Logo" class="hero-logo fade-in" />
       <h1 class="hero-title fade-in delay-1">URBAN COCHI</h1>
       <p class="hero-sub fade-in delay-2">Where Every Thread Has a Story</p>
       <div class="hero-cta fade-in delay-3">
@@ -100,11 +127,8 @@
   <section class="about cinematic">
     <div class="container">
       <h2>About URBAN COCHI</h2>
-      <p>
-        URBAN COCHI is a luxury design and apparel studio blending art and craftsmanship.
-        From uniforms to creative wear, every stitch defines quality and identity.
-      </p>
-      <div class="about-line" aria-hidden="true"></div>
+      <p>URBAN COCHI is a premium design and apparel studio from Kochi that blends creativity, quality, and craftsmanship. We specialize in custom uniforms, creative fashion, and luxury apparel designed to match your brand identity.</p>
+      <div class="about-line"></div>
     </div>
   </section>
 
@@ -113,26 +137,10 @@
     <div class="container">
       <h2>Explore Our World</h2>
       <div class="explore-boxes">
-        <a class="box" href="products.html">
-          <div class="box-icon">👕</div>
-          <h3>Products</h3>
-          <p>Ready-made collections crafted with precision and luxury.</p>
-        </a>
-        <a class="box" href="custom.html">
-          <div class="box-icon">🎨</div>
-          <h3>Custom Designs</h3>
-          <p>Your vision, our fabric — design it your way.</p>
-        </a>
-        <a class="box" href="gallery.html">
-          <div class="box-icon">🖼️</div>
-          <h3>Gallery</h3>
-          <p>Discover our curated showcase of artistry and detail.</p>
-        </a>
-        <a class="box" href="contact.html">
-          <div class="box-icon">📞</div>
-          <h3>Contact</h3>
-          <p>Let’s collaborate — reach out for custom creations.</p>
-        </a>
+        <a class="box" href="products.html"><div class="box-icon">👕</div><h3>Products</h3><p>Premium collections crafted for comfort and style.</p></a>
+        <a class="box" href="custom.html"><div class="box-icon">🎨</div><h3>Custom Designs</h3><p>Your imagination, our fabric — designed your way.</p></a>
+        <a class="box" href="gallery.html"><div class="box-icon">🖼️</div><h3>Gallery</h3><p>See how we bring style and art to life.</p></a>
+        <a class="box" href="contact.html"><div class="box-icon">📞</div><h3>Contact</h3><p>Reach out to collaborate or place custom orders.</p></a>
       </div>
     </div>
   </section>
@@ -141,16 +149,16 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-left">
-        <img src="logo.png" alt="URBAN COCHI" class="footer-logo" />
-        <p class="small">© <span id="year"></span> URBAN COCHI · All rights reserved</p>
+        <img src="logo.png" alt="Urban Cochi" class="footer-logo" />
+        <p class="small">© <span id="year"></span> Urban Cochi · All rights reserved</p>
       </div>
       <div class="footer-right">
-        <div class="socials" style="text-align:center; margin-top:10px;">
-          <a href="https://www.instagram.com/urbancochi/" target="_blank" style="color:#d4af37; text-decoration:none; margin:0 10px;">Instagram</a> |
-          <a href="https://www.youtube.com/@UrbanKochi" target="_blank" style="color:#d4af37; text-decoration:none; margin:0 10px;">YouTube</a> |
-          <a href="https://in.pinterest.com/urbancochi/" target="_blank" style="color:#d4af37; text-decoration:none; margin:0 10px;">Pinterest</a> |
-          <a href="https://urbancochi.blogspot.com/" target="_blank" style="color:#d4af37; text-decoration:none; margin:0 10px;">Blogger</a> |
-          <a href="mailto:theurbankochi@gmail.com" style="color:#d4af37; text-decoration:none; margin:0 10px;">Email</a>
+        <div class="socials">
+          <a href="https://www.instagram.com/urbancochi/" target="_blank">Instagram</a> |
+          <a href="https://www.youtube.com/@UrbanKochi" target="_blank">YouTube</a> |
+          <a href="https://in.pinterest.com/urbancochi/" target="_blank">Pinterest</a> |
+          <a href="https://urbancochi.blogspot.com/" target="_blank">Blogger</a> |
+          <a href="mailto:theurbankochi@gmail.com">Email</a>
         </div>
       </div>
     </div>
@@ -161,10 +169,8 @@
     function toggleMenu() {
       document.querySelector('.nav-links').classList.toggle('active');
     }
-
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    const io = new IntersectionObserver((items) => {
+    const io = new IntersectionObserver(items => {
       items.forEach(item => {
         if (item.isIntersecting) {
           item.target.classList.add('visible');
