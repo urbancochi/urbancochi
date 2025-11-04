@@ -2,3 +2,19 @@ User-agent: *
 Allow: /
 
 Sitemap: https://urbancochi.github.io/urbancochi/sitemap.xml
+
+# Urban Cochi SEO Setup
+User-agent: Googlebot
+Disallow: /private/
+Allow: /
+
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /junk/
+
+# Social media and blog profiles
+Allow: https://www.instagram.com/urbancochi/
+Allow: https://www.youtube.com/@UrbanKochi
+Allow: https://in.pinterest.com/urbancochi/
+Allow: https://urbancochi.blogspot.com/
