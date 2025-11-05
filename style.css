@@ -1,207 +1,116 @@
-/* ==== URBAN COCHI CINEMATIC STYLE ==== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  background: radial-gradient(circle at top, #111, #000);
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at bottom, #000, #111);
   color: #fff;
   overflow-x: hidden;
 }
 
-/* --- Animated gold thread background --- */
-body::before, body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 300%;
-  height: 300%;
-  background: repeating-linear-gradient(
-    90deg,
-    rgba(255,215,0,0.04) 0px,
-    rgba(255,215,0,0.08) 1px,
-    transparent 3px,
-    transparent 5px
-  );
-  transform: rotate(5deg);
-  animation: threads 14s linear infinite;
-  z-index: -2;
-}
-body::after {
-  opacity: 0.3;
-  animation: threads2 20s linear infinite reverse;
-}
-
-@keyframes threads {
-  from { transform: rotate(5deg) translateX(0); }
-  to { transform: rotate(5deg) translateX(-200px); }
-}
-@keyframes threads2 {
-  from { transform: rotate(-5deg) translateX(0); }
-  to { transform: rotate(-5deg) translateX(200px); }
-}
-
-/* --- Navbar --- */
+/* ✅ NAVBAR */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 25px;
-  background: rgba(0, 0, 0, 0.6);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  backdrop-filter: blur(6px);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px; background: rgba(0,0,0,0.6);
+  position: fixed; top: 0; left: 0; width: 100%;
+  z-index: 100; backdrop-filter: blur(10px);
 }
-.logo {
-  display: flex;
-  align-items: center;
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo-img { width: 60px; height: 60px; animation: rotateLogo 10s infinite linear; }
+@keyframes rotateLogo { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+.brand-title { font-weight: 700; color: gold; font-size: 1.2rem; }
+.brand-tag { font-size: 0.8rem; opacity: 0.8; }
+
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a {
+  color: white; text-decoration: none; font-weight: 500;
+  transition: color 0.3s;
 }
-.logo-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  box-shadow: 0 0 15px gold;
+.nav-links a:hover { color: gold; }
+
+.menu-toggle { display: none; cursor: pointer; font-size: 2rem; color: gold; }
+
+/* ✅ HERO SECTION */
+.hero {
+  height: 100vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; position: relative;
+  text-align: center; overflow: hidden;
 }
-.brand {
-  margin-left: 10px;
+.thread-bg {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(ellipse at center, rgba(255,215,0,0.1), transparent),
+              repeating-linear-gradient(120deg, rgba(255,215,0,0.05) 0, rgba(255,215,0,0.05) 2px, transparent 3px, transparent 6px);
+  animation: moveThread 10s linear infinite;
 }
-.brand-title {
-  font-weight: 700;
-  color: gold;
-  font-size: 1.2rem;
+@keyframes moveThread { from { background-position: 0 0; } to { background-position: 400px 400px; } }
+
+.hero-logo { width: 150px; margin-bottom: 20px; z-index: 2; }
+.hero-title { font-size: 3rem; font-weight: 700; color: gold; z-index: 2; }
+.hero-sub { font-size: 1.2rem; margin: 10px 0 20px; z-index: 2; }
+.btn {
+  background: gold; color: #000; padding: 10px 25px;
+  border-radius: 30px; text-decoration: none; font-weight: 600;
+  transition: all 0.4s; margin: 0 10px;
 }
-.brand-tag {
-  font-size: 0.8rem;
-  color: #ccc;
-}
-.nav-links {
-  display: flex;
-  list-style: none;
+.btn:hover { background: white; transform: scale(1.05); }
+.btn-outline { border: 2px solid gold; background: transparent; color: gold; }
+.btn-outline:hover { background: gold; color: black; }
+
+/* ✅ ABOUT */
+.about { padding: 100px 20px; text-align: center; background: #111; }
+.about h2 { color: gold; margin-bottom: 20px; }
+
+/* ✅ GALLERY */
+.gallery { padding: 100px 20px; text-align: center; background: #000; }
+.gallery h2 { color: gold; margin-bottom: 30px; }
+.gallery-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
+.gallery-item {
+  overflow: hidden; border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+  transition: transform 0.5s, box-shadow 0.5s;
 }
-.nav-links a:hover, .nav-links .active {
-  color: gold;
+.gallery-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: brightness(85%); transition: transform 0.8s, filter 0.8s;
 }
-.menu-toggle { display: none; color: gold; font-size: 1.6rem; cursor: pointer; }
-
-/* --- Hero section --- */
-.hero {
-  text-align: center;
-  padding: 120px 20px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
-  animation: fadeIn 1.5s ease-in;
-}
-.hero-logo {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  animation: glow 4s infinite alternate;
-}
-@keyframes glow {
-  from { box-shadow: 0 0 10px gold; }
-  to { box-shadow: 0 0 35px gold; }
-}
-.hero-title {
-  font-size: 2.4rem;
-  color: gold;
-  margin-top: 20px;
-  animation: slideUp 1.5s ease-out;
-}
-.hero-sub {
-  color: #ddd;
-  margin: 10px 0 20px;
-  font-size: 1.1rem;
-  animation: fadeIn 2.5s ease-in;
-}
-.btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 25px;
-  border: 2px solid gold;
-  border-radius: 30px;
-  color: gold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.btn:hover {
-  background: gold;
-  color: #000;
+.gallery-item:hover img { transform: scale(1.1); filter: brightness(100%); }
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
 }
 
-/* --- Sections --- */
-section {
-  padding: 70px 20px;
-  text-align: center;
+/* ✅ SOCIALS */
+.socials { padding: 100px 20px; background: #111; text-align: center; }
+.social-icons { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
+.social-icons a {
+  color: gold; font-weight: 600; text-decoration: none;
+  border: 2px solid gold; padding: 10px 20px; border-radius: 30px;
+  transition: 0.4s;
 }
-section h2 {
-  color: gold;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-}
-section p {
-  max-width: 650px;
-  margin: 0 auto;
-  color: #bbb;
-  line-height: 1.6;
-}
+.social-icons a:hover { background: gold; color: black; }
 
-/* --- Footer --- */
+/* ✅ FOOTER */
 .site-footer {
-  background: rgba(0,0,0,0.7);
-  padding: 25px 15px;
-  text-align: center;
-  border-top: 1px solid gold;
-  font-size: 0.9rem;
-  color: #aaa;
+  background: #000; padding: 30px; text-align: center;
+  border-top: 1px solid rgba(255,215,0,0.2);
 }
-.footer-logo { width: 70px; filter: drop-shadow(0 0 5px gold); }
+.footer-grid { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.footer-logo { width: 80px; }
 
-/* --- Animations --- */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+/* ✅ ANIMATIONS */
+.fade-in { opacity: 0; transform: translateY(30px); animation: fadeIn 1.2s ease forwards; }
+.delay-1 { animation-delay: 0.3s; } .delay-2 { animation-delay: 0.6s; } .delay-3 { animation-delay: 0.9s; }
 
-/* --- Mobile responsive --- */
-@media (max-width: 700px) {
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: rgba(0,0,0,0.9);
-    flex-direction: column;
-    width: 200px;
-    display: none;
-    padding: 15px;
-  }
+@keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+
+.reveal { opacity: 0; transform: translateY(60px); transition: 1s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* ✅ MOBILE */
+@media (max-width: 768px) {
+  .nav-links { display: none; flex-direction: column; position: absolute; top: 70px; right: 0; background: rgba(0,0,0,0.9); padding: 20px; border-radius: 8px; }
   .nav-links.active { display: flex; }
   .menu-toggle { display: block; }
-  .hero-title { font-size: 1.8rem; }
-}
-.gallery img {
-  width: 100%;
-  max-width: 250px;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.05) rotateY(10deg);
-  box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
 }
