@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[11:14 am, 5/11/2025] Aswin: <!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- =========================
@@ -13,9 +13,23 @@
   <meta name="robots" content="index, follow" />
 
   <!-- Google verification (kept as requested) -->
+  <meta name="google-site-verification" content="TcVqP…
+[12:21 pm, 5/11/2025] Aswin: <!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ===== BASIC / SEO / GOOGLE ===== -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Urban Cochi | Every Thread Has a Story</title>
+  <meta name="description" content="Urban Cochi — premium custom clothing & couture from Kochi. Corporate uniforms, wedding couture, and bespoke designs." />
+  <meta name="keywords" content="Urban Cochi, Kochi, custom clothing, uniforms, wedding couture, designer wear" />
+  <meta name="author" content="Urban Cochi" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Google site verification -->
   <meta name="google-site-verification" content="TcVqPRK4bRNlkF-Pp1hgvJNsPGEug-DMktkbAXR25p0" />
 
-  <!-- Open Graph (social preview) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Urban Cochi | Every Thread Has a Story" />
   <meta property="og:description" content="Premium custom clothing & couture from Kochi. You imagine, we create." />
   <meta property="og:image" content="https://urbancochi.github.io/urbancochi/logo.png" />
@@ -23,24 +37,19 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Structured data (Organization + Product simplified) -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@graph":[
-      {"@type":["Organization","LocalBusiness"],
-       "name":"Urban Cochi",
-       "url":"https://urbancochi.github.io/urbancochi/",
-       "logo":"https://urbancochi.github.io/urbancochi/logo.png",
-       "description":"Urban Cochi is a premium custom clothing and design studio in Kochi, Kerala.",
-       "address":{"@type":"PostalAddress","addressLocality":"Kochi","addressRegion":"Kerala","postalCode":"682030","addressCountry":"IN"},
-       "contactPoint":{"@type":"ContactPoint","telephone":"+91-7306316859","contactType":"Customer Service","areaServed":"IN"}
-      },
-      {"@type":"Product",
-       "name":"Custom Designer Wear & Uniforms",
-       "description":"Premium custom uniforms and designer wear by Urban Cochi",
-       "image":"https://urbancochi.github.io/urbancochi/logo.png",
-       "offers":{"@type":"Offer","priceCurrency":"INR","availability":"https://schema.org/InStock"}
+      {
+        "@type":["Organization","LocalBusiness"],
+        "name":"Urban Cochi",
+        "url":"https://urbancochi.github.io/urbancochi/",
+        "logo":"https://urbancochi.github.io/urbancochi/logo.png",
+        "description":"Urban Cochi is a premium custom clothing and design studio in Kochi, Kerala.",
+        "address":{"@type":"PostalAddress","addressLocality":"Kochi","addressRegion":"Kerala","postalCode":"682030","addressCountry":"IN"},
+        "contactPoint":{"@type":"ContactPoint","telephone":"+91-7306316859","contactType":"Customer Service","areaServed":"IN"}
       }
     ]
   }
@@ -49,264 +58,48 @@
   <!-- Favicon -->
   <link rel="icon" href="logo.png" />
 
-  <!-- Fonts (safe to load; if you want fully offline, remove this and rely on system fonts) -->
+  <!-- Fonts (optional; keep for nicer UI) -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <!-- =========================
-       STYLES (INLINE: keep in same file for single-file deploy)
-       ========================= -->
-  <style>
-    :root{
-      --bg:#030303;
-      --panel:#0f0f0f;
-      --gold:#ffbf2e;
-      --gold-30: rgba(255,191,46,0.18);
-      --muted:#cfcfcf;
-      --glass: rgba(255,255,255,0.03);
-      --max-width:1200px;
-      --radius:14px;
-      --ease: cubic-bezier(.2,.9,.3,1);
-    }
-
-    /* Basic reset */
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: radial-gradient(circle at 10% 10%, #080808 0%, var(--bg) 48%, #000 100%);
-      color:#fff;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      overflow-x:hidden;
-      line-height:1.5;
-    }
-
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-
-    /* ---------------------------------
-       PRELOADER (cinematic gold glow)
-       ---------------------------------*/
-    #preloader{
-      position:fixed;inset:0;
-      display:flex;align-items:center;justify-content:center;flex-direction:column;
-      background:linear-gradient(180deg, rgba(0,0,0,1), rgba(10,10,10,1));
-      z-index:99999;
-      gap:18px;
-      transition:opacity .9s var(--ease), visibility .9s var(--ease);
-    }
-    #preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}
-    .preloader-logo{width:120px;filter:drop-shadow(0 0 18px rgba(255,191,46,.45))}
-    .preloader-text{
-      color:var(--gold);font-weight:700;letter-spacing:4px;font-size:18px;
-      text-shadow:0 0 18px rgba(255,191,46,.25);transform:translateY(-2px)
-    }
-    .preloader-bar{
-      width:120px;height:4px;border-radius:4px;background:linear-gradient(90deg, transparent, var(--gold), transparent);
-      animation:pre-bar 1.6s linear infinite;
-      box-shadow:0 0 18px rgba(255,191,46,.12);
-    }
-    @keyframes pre-bar{
-      0%{transform:translateX(-60px);opacity:.5}
-      50%{transform:translateX(0);opacity:1}
-      100%{transform:translateX(60px);opacity:.5}
-    }
-
-    /* ---------------------------------
-       NAVBAR
-       ---------------------------------*/
-    header.navbar{
-      position:fixed;left:0;right:0;top:0;z-index:1200;
-      display:flex;align-items:center;justify-content:space-between;
-      gap:12px;padding:14px 22px;
-      background:linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.25));
-      backdrop-filter: blur(6px);
-      border-bottom:1px solid rgba(255,255,255,0.03);
-      transition: background .35s var(--ease), box-shadow .35s var(--ease), transform .35s var(--ease);
-    }
-    header.navbar.scrolled{
-      background: linear-gradient(180deg, rgba(0,0,0,.95), rgba(0,0,0,.9));
-      box-shadow: 0 8px 30px rgba(0,0,0,.6);
-    }
-    .nav-left{display:flex;align-items:center;gap:12px}
-    .logo-img{width:50px;height:50px;border-radius:10px;box-shadow:0 6px 30px rgba(255,191,46,.12)}
-    .brand-title{font-weight:700;color:var(--gold);letter-spacing:1px}
-    .brand-sub{font-size:.78rem;color:var(--muted);margin-top:2px}
-
-    nav.nav{
-      display:flex;gap:18px;align-items:center;
-    }
-    nav.nav a{color:#fff;padding:8px 10px;border-radius:8px;transition:background .25s var(--ease),color .25s var(--ease)}
-    nav.nav a:hover{background:var(--glass);color:var(--gold)}
-    nav.nav a.active{color:var(--gold);background:linear-gradient(90deg, rgba(255,191,46,.04), transparent)}
-
-    .menu-toggle{display:none;font-size:22px;cursor:pointer;color:var(--muted)}
-
-    /* ---------------------------------
-       HERO (background video + parallax)
-       ---------------------------------*/
-    .hero{
-      min-height:100vh;display:flex;align-items:center;justify-content:center;
-      position:relative;padding:60px 20px 40px;text-align:center;overflow:hidden;
-    }
-
-    /* cinematic overlays and particle-like subtle gradient */
-    .hero::before{
-      content:"";position:absolute;inset:0;
-      background:
-        radial-gradient(800px 400px at 10% 20%, rgba(255,191,46,0.03), transparent 10%),
-        radial-gradient(600px 250px at 90% 80%, rgba(255,191,46,0.02), transparent 10%);
-      mix-blend-mode:screen;pointer-events:none;z-index:1;
-    }
-
-    .hero-bg-video{
-      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
-      transform: translateZ(0);
-      filter:brightness(.42) contrast(1.05) saturate(1.05);
-      will-change: transform;
-    }
-
-    /* layered overlay to enhance contrast */
-    .hero-overlay{
-      position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.7));z-index:1;
-    }
-
-    .hero-inner{position:relative;z-index:2;max-width:1100px;padding:40px;display:flex;flex-direction:column;align-items:center;gap:18px}
-
-    .hero-logo{width:150px;border-radius:18px;box-shadow:0 30px 60px rgba(0,0,0,.6), 0 0 24px rgba(255,191,46,.16)}
-    .hero-title{font-size: clamp(28px, 5vw, 56px); color:var(--gold); letter-spacing:4px; font-weight:700; text-shadow:0 6px 28px rgba(255,191,46,.12)}
-    .hero-sub{color:var(--muted);font-size:clamp(14px, 1.6vw, 18px);margin-top:2px;max-width:800px}
-
-    .hero-ctas{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
-    .btn{
-      display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;font-weight:600;
-      background:linear-gradient(90deg,var(--gold), #ffd77a); color:#0b0b0b; box-shadow:0 10px 30px rgba(255,191,46,.14);
-      transition: transform .25s var(--ease), box-shadow .25s var(--ease);
-    }
-    .btn:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(255,191,46,.22)}
-    .btn-outline{background:transparent;border:1.5px solid rgba(255,191,46,.18);color:var(--gold);backdrop-filter:blur(6px)}
-
-    /* subtle decorative golden ribbon */
-    .ribbon {
-      position:absolute; right:-8%; top:56%; width:420px; height:420px; border-radius:50%;
-      background: conic-gradient(from 200deg, rgba(255,191,46,0.06), transparent 20%);
-      transform:translate3d(0,-50%,0) rotate(-12deg); z-index:0; filter:blur(25px);
-      pointer-events:none;
-    }
-
-    /* ---------------------------------
-       CONTENT PANELS (about / products / contact)
-       ---------------------------------*/
-    .panel{
-      max-width:var(--max-width);margin:60px auto;padding:42px;border-radius:var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
-      box-shadow: 0 8px 40px rgba(0,0,0,.6);
-      border: 1px solid rgba(255,191,46,.04);
-      opacity:0; transform:translateY(28px) scale(.995); transition: all .9s var(--ease);
-    }
-    .panel.visible{opacity:1; transform:translateY(0) scale(1)}
-
-    .panel h2{ color:var(--gold); font-size:1.6rem; margin-bottom:10px; }
-    .panel p{ color:var(--muted); max-width:920px; margin:0 auto; line-height:1.8 }
-
-    /* products grid */
-    .grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:22px; margin-top:20px }
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.01), rgba(255,255,255,.02));
-      padding:22px;border-radius:12px;border:1px solid rgba(255,255,255,.03);
-      min-height:140px; display:flex;flex-direction:column;gap:8px;justify-content:center;
-      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
-    }
-    .card h3{ color:var(--gold); margin:0; font-size:1.05rem}
-    .card p{ color:var(--muted); font-size:.95rem}
-    .card:hover{ transform:translateY(-8px); box-shadow:0 20px 50px rgba(0,0,0,.6), 0 6px 25px rgba(255,191,46,.06) }
-
-    /* SOCIAL ICONS row */
-    .social-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:12px}
-    .social-row a{
-      display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;
-      background: rgba(255,255,255,.02); color:var(--gold); border:1px solid rgba(255,191,46,.06);
-      transition:transform .25s var(--ease), background .25s var(--ease)
-    }
-    .social-row a:hover{ transform:translateY(-6px); background:linear-gradient(90deg, rgba(255,191,46,.06), rgba(255,191,46,.02)) }
-
-    /* FOOTER */
-    footer.site-footer{
-      margin-top:36px;padding:30px 20px;background:transparent;text-align:center;color:#bdbdbd
-    }
-    footer .small{font-size:.9rem;color:var(--muted);}
-
-    /* ---------------------------------
-       SMALL SCREENS
-       ---------------------------------*/
-    @media (max-width:900px){
-      .hero-inner{padding:24px}
-      .ribbon{display:none}
-      header.navbar{padding:10px 14px}
-      .logo-img{width:44px;height:44px}
-      .brand-title{font-size:.98rem}
-    }
-    @media (max-width:600px){
-      nav.nav{display:none}
-      .menu-toggle{display:inline-block}
-      .hero-title{font-size:28px}
-      .hero-sub{font-size:14px}
-      .panel{margin:20px;padding:26px}
-    }
-
-    /* ---------------------------------
-       prefers-reduced-motion (accessibility)
-       ---------------------------------*/
-    @media (prefers-reduced-motion: reduce){
-      *{animation:none!important;transition:none!important}
-      .hero-bg-video{filter:brightness(.45)}
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- =========================
-       PRELOADER
-       ========================= -->
-  <div id="preloader" role="status" aria-label="Loading the Urban Cochi website">
+  <!-- ===== PRELOADER ===== -->
+  <div id="preloader" role="status" aria-label="Loading Urban Cochi">
     <img src="logo.png" alt="Urban Cochi logo" class="preloader-logo" />
     <div class="preloader-text">URBAN COCHI</div>
     <div class="preloader-bar" aria-hidden="true"></div>
   </div>
 
-  <!-- =========================
-       NAVBAR
-       ========================= -->
-  <header class="navbar" role="navigation" aria-label="Main navigation">
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" role="navigation" aria-label="Primary">
     <div class="nav-left">
       <img src="logo.png" alt="" aria-hidden="true" class="logo-img" />
-      <div>
+      <div class="brand">
         <div class="brand-title">URBAN COCHI</div>
-        <div class="brand-sub">Where Every Thread Has a Story</div>
+        <div class="brand-sub">Every Thread Has a Story</div>
       </div>
     </div>
 
-    <nav class="nav" role="menubar" aria-label="Primary">
-      <a class="active" href="#home" role="menuitem">Home</a>
-      <a href="#about" role="menuitem">About</a>
-      <a href="#products" role="menuitem">Products</a>
-      <a href="#contact" role="menuitem">Contact</a>
+    <nav class="nav" role="menubar" aria-label="Main menu">
+      <a href="#home" class="nav-link active" role="menuitem">Home</a>
+      <a href="#about" class="nav-link" role="menuitem">About</a>
+      <a href="#services" class="nav-link" role="menuitem">Services</a>
+      <a href="#gallery" class="nav-link" role="menuitem">Gallery</a>
+      <a href="#contact" class="nav-link" role="menuitem">Contact</a>
     </nav>
 
     <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu" onclick="toggleMobileMenu()">☰</button>
   </header>
 
-  <!-- =========================
-       HERO (video background + parallax)
-       ========================= -->
+  <!-- ===== HERO (Video + Parallax) ===== -->
   <main>
     <section id="home" class="hero" aria-label="Hero">
       <div class="ribbon" aria-hidden="true"></div>
 
       <video class="hero-bg-video" autoplay muted loop playsinline aria-hidden="true">
-        <source src="https://cdn.jsdelivr.net/gh/urbanwebassets/videos/fabric-motion.mp4" type="video/mp4">
-        <!-- fallback: if video not available, use a dark background image -->
+        <source src="https://cdn.jsdelivr.net/gh/urbanwebassets/videos/fabric-motion.mp4" type="video/mp4" />
       </video>
 
       <div class="hero-overlay" aria-hidden="true"></div>
@@ -314,149 +107,161 @@
       <div class="hero-inner" role="region" aria-labelledby="hero-heading">
         <img src="logo.png" alt="Urban Cochi logo" class="hero-logo" />
         <h1 id="hero-heading" class="hero-title">URBAN COCHI</h1>
-        <p class="hero-sub">Where Every Thread Has a Story — bespoke uniforms, couture and creative collaborations from Kochi.</p>
+        <p class="hero-sub">Every Thread Has a Story — bespoke uniforms, couture and custom collaborations.</p>
 
         <div class="hero-ctas">
-          <a href="#products" class="btn" role="button">Explore Products</a>
-          <a href="#contact" class="btn btn-outline" role="button">Contact Us</a>
+          <a href="#services" class="btn">Our Services</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT PANEL -->
+    <!-- ===== ABOUT ===== -->
     <section id="about" class="panel cinematic" aria-labelledby="about-heading">
-      <h2 id="about-heading">About Urban Cochi</h2>
-      <p>We are a design studio and couture atelier based in Kochi, focused on premium craftsmanship. From corporate uniforms to wedding couture and limited-edition collections—we craft garments that represent stories, identities and experiences.</p>
+      <div class="panel-inner">
+        <h2 id="about-heading">About Urban Cochi</h2>
+        <p>Urban Cochi is a design studio & couture atelier in Kochi. We specialize in premium uniforms, wedding couture, and bespoke fashion — delivering concept to finished garment with craft-led precision and cinematic aesthetics.</p>
+      </div>
     </section>
 
-    <!-- PRODUCTS PANEL -->
-    <section id="products" class="panel cinematic" aria-labelledby="products-heading">
-      <h2 id="products-heading">Our Solutions</h2>
-      <p>We provide end-to-end apparel solutions: concept, fabric sourcing, pattern & sample, production, and finishing.</p>
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="panel cinematic" aria-labelledby="services-heading">
+      <div class="panel-inner">
+        <h2 id="services-heading">Services</h2>
+        <p>End-to-end apparel solutions: design, fabric sourcing, pattern & sample, production, finishing, and styling.</p>
 
-      <div class="grid" aria-hidden="false">
-        <div class="card">
-          <h3>Corporate Uniforms</h3>
-          <p>Smart, durable and brand-aligned uniforms for hotels, offices, retail and institutions.</p>
-        </div>
-        <div class="card">
-          <h3>Wedding & Event Couture</h3>
-          <p>Exclusive bespoke garments for couples and events — tailored with artisan details.</p>
-        </div>
-        <div class="card">
-          <h3>Creative Custom Wear</h3>
-          <p>Small-run and bespoke fashion, prints, and collaborative projects for designers and creators.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Corporate Uniforms</h3>
+            <p>Durable, branded, and smart uniforms for hospitality, corporate and retail.</p>
+          </div>
+          <div class="card">
+            <h3>Wedding & Event Couture</h3>
+            <p>Artisan-made bespoke garments with luxurious detailing for weddings and premium events.</p>
+          </div>
+          <div class="card">
+            <h3>Custom Collections</h3>
+            <p>Small-run fashion, limited editions, collaborative design services and prints.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SOCIALS / CONTACT PANEL -->
-    <section id="contact" class="panel cinematic" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Connect With Us</h2>
-      <p>📞 <a href="tel:+917306316859">7306316859</a> | <a href="tel:+919061397002">9061397002</a><br>
-         ✉️ <a href="mailto:theurbankochi@gmail.com">theurbankochi@gmail.com</a></p>
+    <!-- ===== GALLERY ===== -->
+    <section id="gallery" class="panel cinematic" aria-labelledby="gallery-heading">
+      <div class="panel-inner">
+        <h2 id="gallery-heading">Gallery</h2>
+        <p>Selected works — clean images are recommended. Replace placeholders with your product photos.</p>
+        <div class="gallery-grid" aria-hidden="false">
+          <!-- Replace these srcs with your images -->
+          <div class="gallery-item"><img src="gallery1.jpg" alt="Gallery image 1"></div>
+          <div class="gallery-item"><img src="gallery2.jpg" alt="Gallery image 2"></div>
+          <div class="gallery-item"><img src="gallery3.jpg" alt="Gallery image 3"></div>
+          <div class="gallery-item"><img src="gallery4.jpg" alt="Gallery image 4"></div>
+        </div>
+      </div>
+    </section>
 
-      <div class="social-row" aria-label="Social links">
-        <a href="https://www.instagram.com/urbancochi/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.youtube.com/@UrbanKochi" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://in.pinterest.com/urbancochi/" target="_blank" rel="noopener">Pinterest</a>
-        <a href="https://urbancochi.blogspot.com/" target="_blank" rel="noopener">Blog</a>
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="panel cinematic" aria-labelledby="contact-heading">
+      <div class="panel-inner">
+        <h2 id="contact-heading">Connect With Us</h2>
+        <p>📞 <a href="tel:+917306316859">7306316859</a> | <a href="tel:+919061397002">9061397002</a><br>
+           ✉️ <a href="mailto:theurbankochi@gmail.com">theurbankochi@gmail.com</a></p>
+
+        <div class="social-row" aria-label="Social links">
+          <a href="https://www.instagram.com/urbancochi/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.youtube.com/@UrbanKochi" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://in.pinterest.com/urbancochi/" target="_blank" rel="noopener">Pinterest</a>
+          <a href="https://urbancochi.blogspot.com/" target="_blank" rel="noopener">Blog</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container footer-grid">
-      <img src="logo.png" alt="Urban Cochi" class="footer-logo" style="width:64px;margin:0 auto 10px;display:block" />
+    <div class="footer-inner">
+      <img src="logo.png" alt="Urban Cochi" class="footer-logo" />
       <div class="small">© <span id="year"></span> Urban Cochi · All rights reserved</div>
-      <div style="margin-top:8px"><a href="mailto:theurbankochi@gmail.com" style="color:var(--gold)">theurbankochi@gmail.com</a></div>
+      <div><a href="mailto:theurbankochi@gmail.com" class="footer-mail">theurbankochi@gmail.com</a></div>
     </div>
   </footer>
 
-  <!-- =========================
-       SCRIPTS (vanilla JS: preload, parallax, animations, navbar)
-       ========================= -->
+  <!-- ===== SCRIPTS (vanilla JS) ===== -->
   <script>
-    // Auto update year
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // PRELOADER: hide after load + small delay for cinematic effect
+    // Preloader hide
     window.addEventListener('load', () => {
       const pre = document.getElementById('preloader');
-      // allow slight time for hero video to paint
-      setTimeout(()=>{ pre.classList.add('hidden') }, 1000);
+      setTimeout(()=> pre.classList.add('hidden'), 900);
     });
 
-    // NAVBAR: add .scrolled when page scroll past hero viewport
-    const header = document.querySelector('header.navbar');
-    const heroSection = document.querySelector('.hero');
-    function onScroll() {
-      const trigger = Math.max(window.innerHeight * 0.04, 40);
-      if (window.scrollY > trigger) header.classList.add('scrolled'); else header.classList.remove('scrolled');
+    // Mobile menu toggle
+    function toggleMobileMenu(){
+      const nav = document.querySelector('nav.nav');
+      const btn = document.querySelector('.menu-toggle');
+      const isOpen = nav.style.display === 'flex';
+      if(!isOpen){
+        nav.style.display = 'flex';
+        nav.style.flexDirection = 'column';
+        nav.style.position = 'absolute';
+        nav.style.right = '12px';
+        nav.style.top = '70px';
+        nav.style.background = 'linear-gradient(180deg, rgba(0,0,0,.95), rgba(0,0,0,.9))';
+        nav.style.padding = '12px';
+        nav.style.borderRadius = '10px';
+        btn.setAttribute('aria-expanded','true');
+      } else {
+        nav.style.display = '';
+        btn.setAttribute('aria-expanded','false');
+      }
+    }
+
+    // Navbar scrolled class
+    const header = document.querySelector('.navbar');
+    function onScroll(){
+      if(window.scrollY > 40) header.classList.add('scrolled'); else header.classList.remove('scrolled');
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    // MOBILE MENU (simple)
-    function toggleMobileMenu(){
-      const nav = document.querySelector('nav.nav');
-      const btn = document.querySelector('.menu-toggle');
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      nav.style.display = expanded ? '' : 'flex';
-      nav.style.flexDirection = 'column';
-      nav.style.position = 'absolute';
-      nav.style.right = '16px';
-      nav.style.top = '70px';
-      nav.style.background = 'linear-gradient(180deg, rgba(0,0,0,.96), rgba(0,0,0,.85))';
-      nav.style.padding = '14px';
-      nav.style.borderRadius = '10px';
-      nav.style.gap = '12px';
-      nav.style.minWidth = '170px';
-    }
-
-    // INTERSECTION OBSERVER: reveal panels & cards with cinematic motion
-    const ioOptions = { threshold: 0.16 };
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          // once visible, unobserve to save work
-          io.unobserve(entry.target);
+    // Intersection observer: reveal panels/cards
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(en => {
+        if(en.isIntersecting){
+          en.target.classList.add('visible');
+          obs.unobserve(en.target);
         }
       });
-    }, ioOptions);
+    }, { threshold: 0.16 });
 
-    document.querySelectorAll('.cinematic, .panel, .card').forEach(el => io.observe(el));
+    document.querySelectorAll('.cinematic, .panel, .card, .gallery-item').forEach(el => io.observe(el));
 
-    // PARALLAX: subtle translate on hero's video based on scroll (keeps performant)
+    // Parallax: gentle video translate
     const video = document.querySelector('.hero-bg-video');
-    let lastScroll = 0;
-    function tickParallax(){
+    function parallax(){
       const sc = window.scrollY;
-      // small parallax effect mapping scroll to translateY of video
-      const t = Math.max(Math.min(sc * 0.12, 120), -40);
-      if (video) video.style.transform = translate3d(0, ${t}px, 0) scale(1.02);
-      lastScroll = sc;
-      requestAnimationFrame(()=>{ /* no-op to keep smooth loop if needed */ });
+      if(video) video.style.transform = translate3d(0, ${Math.min(sc * 0.08, 110)}px, 0) scale(1.02);
     }
-    window.addEventListener('scroll', () => { window.requestAnimationFrame(tickParallax) }, { passive:true });
+    window.addEventListener('scroll', () => requestAnimationFrame(parallax), { passive:true });
 
-    // Accessibility: close mobile nav on outside click (optional)
+    // Close mobile nav on outside click
     document.addEventListener('click', (e) => {
       const nav = document.querySelector('nav.nav');
       const btn = document.querySelector('.menu-toggle');
-      if (!nav || !btn) return;
-      if (nav.contains(e.target) || btn.contains(e.target)) return;
-      if (window.innerWidth <= 900 && nav.style.display === 'flex') {
-        nav.style.display = 'none';
+      if(!nav || !btn) return;
+      if(nav.contains(e.target) || btn.contains(e.target)) return;
+      if(window.innerWidth < 900 && nav.style.display === 'flex'){
+        nav.style.display = '';
         btn.setAttribute('aria-expanded','false');
       }
     });
   </script>
 
-  <!-- Optional placeholder for Google Analytics (replace G-XXXXXXXXXX) -->
+  <!-- Analytics placeholder (replace G-XXXXXXXXXX with your GA id) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -465,4 +270,4 @@
     // gtag('config', 'G-XXXXXXXXXX');
   </script>
 </body>
-</html>
+</html
