@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[3:46 PM, 11/5/2025] Aswin: <!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- =========================
@@ -13,450 +13,230 @@
   <meta name="robots" content="index, follow" />
 
   <!-- Google verification (kept) -->
-  <meta name="google-site-verification" content="TcVqPRK4bRNlkF-Pp1hgvJNsPGEug-DMktkbAXR25p0" />
+  <meta name="google-site-verification" content="TcVqPRK4bRNlkF-Pp1…
+[3:52 PM, 11/5/2025] Aswin: <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Urban Cochi — Custom Clothing & Corporate Uniforms. Every thread has a story." />
+  <meta name="keywords" content="Urban Cochi, clothing brand, uniforms, fashion, Kochi, custom wear" />
+  <meta name="author" content="Urban Cochi" />
+  <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
 
-  <!-- SOCIAL / OG -->
-  <meta property="og:title" content="Urban Cochi | Every Thread Has a Story" />
-  <meta property="og:description" content="Premium custom clothing & couture from Kochi. You imagine, we create." />
-  <meta property="og:image" content="https://urbancochi.github.io/urbancochi/logo.png" />
+  <!-- Open Graph for social media -->
+  <meta property="og:title" content="Urban Cochi – Every Thread Has a Story" />
+  <meta property="og:description" content="Corporate uniforms, premium wedding collections & custom fashion by Urban Cochi." />
+  <meta property="og:image" content="images/logo.png" />
   <meta property="og:url" content="https://urbancochi.github.io/urbancochi/" />
-  <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- favicon -->
-  <link rel="icon" href="logo.png" />
-
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- =========================
-       STYLES (INLINE)
-       ========================= -->
+  <title>Urban Cochi – Every Thread Has a Story</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    :root{
-      --bg-dark:#050505;
-      --panel:#0f0f0f;
-      --gold:#ffbf2e;
-      --gold-30: rgba(255,191,46,0.18);
-      --muted:#cfcfcf;
-      --glass: rgba(255,255,255,0.03);
-      --max-width:1150px;
-      --radius:14px;
-      --ease: cubic-bezier(.2,.9,.3,1);
+    /* ✨ Basic Reset & Font */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background-color: #000;
+      overflow-x: hidden;
     }
 
-    /* reset */
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:"Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg, #080808 0%, #050505 60%);
-      color:#fff;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      overflow-x:hidden;
-      line-height:1.5;
-    }
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-
-    /* -----------------------
-       PRELOADER
-       ----------------------- */
-    #preloader{
-      position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
-      background:linear-gradient(180deg,#000,#070707);z-index:99999;gap:18px;transition:opacity .9s var(--ease),visibility .9s var(--ease)
-    }
-    #preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}
-    .preloader-logo{width:120px;filter:drop-shadow(0 0 22px rgba(255,191,46,.45))}
-    .preloader-text{color:var(--gold);font-weight:700;letter-spacing:4px;font-size:18px;text-shadow:0 0 18px rgba(255,191,46,.25)}
-    .preloader-bar{width:120px;height:4px;border-radius:4px;background:linear-gradient(90deg, transparent, var(--gold), transparent);animation:pre-bar 1.6s linear infinite;box-shadow:0 0 18px rgba(255,191,46,.12)}
-    @keyframes pre-bar{0%{transform:translateX(-60px);opacity:.5}50%{transform:translateX(0);opacity:1}100%{transform:translateX(60px);opacity:.5}}
-
-    /* -----------------------
-       NAVBAR
-       ----------------------- */
-    header.navbar{
-      position:fixed;left:0;right:0;top:0;z-index:1200;
-      display:flex;align-items:center;justify-content:space-between;padding:12px 24px;background:linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.25));backdrop-filter:blur(6px);
-      border-bottom:1px solid rgba(255,255,255,0.03);transition: background .35s var(--ease), box-shadow .35s var(--ease);
-    }
-    header.navbar.scrolled{background: linear-gradient(180deg, rgba(0,0,0,.95), rgba(0,0,0,.9));box-shadow: 0 10px 40px rgba(0,0,0,.6)}
-    .nav-left{display:flex;align-items:center;gap:12px}
-    .logo-img{width:48px;height:48px;border-radius:12px;box-shadow:0 6px 30px rgba(255,191,46,.12)}
-    .brand-title{font-weight:700;color:var(--gold);letter-spacing:1px}
-    .brand-sub{font-size:.8rem;color:var(--muted);margin-top:2px}
-
-    nav.nav{display:flex;gap:18px;align-items:center}
-    nav.nav a{color:#fff;padding:8px 10px;border-radius:8px;transition:background .25s var(--ease),color .25s var(--ease)}
-    nav.nav a:hover{background:var(--glass);color:var(--gold)}
-    nav.nav a.active{color:var(--gold);background:linear-gradient(90deg, rgba(255,191,46,.04), transparent)}
-    .menu-toggle{display:none;font-size:22px;cursor:pointer;color:var(--muted)}
-
-    /* -----------------------
-       CINEMATIC BACKGROUND (fabric texture + particle lights)
-       ----------------------- */
-    /* subtle fabric texture via layered noise-ish gradients */
-    .cinematic-bg {
-      position:fixed;inset:0;z-index:-2;pointer-events:none;
-      background:
-        radial-gradient(1200px 600px at 10% 15%, rgba(255,191,46,0.02), transparent 6%),
-        radial-gradient(1000px 500px at 85% 80%, rgba(255,191,46,0.01), transparent 6%),
-        linear-gradient(180deg,#060606 0%, #050505 40%, #020202 100%);
-      opacity:1;mix-blend-mode:multiply;
-    }
-    /* very subtle moving grain overlay (simulate fabric sheen) */
-    .grain {
-      position:fixed;inset:0;z-index:-1;opacity:.06;background-image:radial-gradient(circle, rgba(255,255,255,.02) 1px, transparent 1px);
-      background-size: 6px 6px; animation:grainMove 20s linear infinite;
-    }
-    @keyframes grainMove{from{transform:translateY(0)}to{transform:translateY(60px)}}
-
-    /* -----------------------
-       HERO (with animated threads SVG)
-       ----------------------- */
-    .hero{
-      min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:80px 20px 40px;text-align:center;overflow:hidden;
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
     }
 
-    /* ribbon / light */
-    .ribbon{
-      position:absolute;right:-8%;top:56%;width:420px;height:420px;border-radius:50%;
-      background: conic-gradient(from 200deg, rgba(255,191,46,0.06), transparent 20%);
-      transform:translate3d(0,-50%,0) rotate(-12deg);z-index:0;filter:blur(25px);pointer-events:none;
+    header img.logo {
+      height: 50px;
+      filter: drop-shadow(0 0 5px gold);
     }
 
-    /* thread-layer container sits on top of video/background */
-    .thread-layer{
-      position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;
+    nav a {
+      color: gold;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover { color: white; text-shadow: 0 0 10px gold; }
+
+    /* 🎥 Hero Section */
+    .hero {
+      height: 100vh;
+      background: radial-gradient(ellipse at bottom, #1a1a1a 0%, #000 100%);
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
     }
 
-    /* hero inner content */
-    .hero-inner{position:relative;z-index:2;max-width:1080px;padding:40px;display:flex;flex-direction:column;align-items:center;gap:18px}
-    .hero-logo{width:150px;border-radius:18px;box-shadow:0 30px 60px rgba(0,0,0,.6), 0 0 30px rgba(255,191,46,.14)}
-    .hero-title{font-size: clamp(28px, 5vw, 56px); color:var(--gold); letter-spacing:4px; font-weight:700; text-shadow:0 6px 28px rgba(255,191,46,.12)}
-    .hero-sub{color:var(--muted);font-size:clamp(14px, 1.6vw, 18px);margin-top:2px;max-width:820px}
-    .hero-ctas{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
-
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;font-weight:600;background:linear-gradient(90deg,var(--gold), #ffd77a);color:#0b0b0b;box-shadow:0 10px 30px rgba(255,191,46,.14);transition: transform .25s var(--ease), box-shadow .25s var(--ease)}
-    .btn:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(255,191,46,.22)}
-    .btn-outline{background:transparent;border:1.5px solid rgba(255,191,46,.18);color:var(--gold);backdrop-filter:blur(6px)}
-
-    /* -----------------------
-       THREAD SVG styles
-       ----------------------- */
-    /* slow, soft flowing thread (long, subtle) */
-    .thread-soft path{stroke:rgba(255,215,120,0.12);stroke-width:2;fill:none;stroke-linecap:round;filter:blur(.4px)}
-    .thread-soft path.thread-core{stroke:var(--gold);stroke-width:1.2;opacity:.9;mix-blend-mode:screen}
-    .thread-soft .move{animation:softFlow 18s linear infinite}
-
-    @keyframes softFlow{
-      0%{transform:translateX(-2%);}
-      50%{transform:translateX(2%);}
-      100%{transform:translateX(-2%);}
+    .hero h1 {
+      font-size: 3rem;
+      color: gold;
+      text-shadow: 0 0 15px gold;
+      animation: fadeDown 1.5s ease-out forwards;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #ddd;
+      opacity: 0;
+      animation: fadeUp 2s 1s forwards;
     }
 
-    /* dynamic thread waves */
-    .thread-dynamic path{stroke:rgba(255,215,120,0.18);stroke-width:1.5;fill:none;stroke-linecap:round;opacity:.8}
-    .thread-dynamic path.wave{stroke:var(--gold);stroke-width:1.2;opacity:1;filter:drop-shadow(0 0 8px rgba(255,191,46,.12))}
+    @keyframes fadeDown { from { opacity:0; transform:translateY(-40px);} to {opacity:1; transform:translateY(0);} }
+    @keyframes fadeUp { from {opacity:0; transform:translateY(40px);} to {opacity:1; transform:translateY(0);} }
 
-    /* wave motion using stroke-dashoffset and transform */
-    .thread-dynamic .wave{stroke-dasharray:1200;stroke-dashoffset:1200;animation:waveDraw 4.6s linear infinite, waveShift 9s linear infinite}
-    @keyframes waveDraw{0%{stroke-dashoffset:1200}50%{stroke-dashoffset:600}100%{stroke-dashoffset:1200}}
-    @keyframes waveShift{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
-
-    /* micro-particles along threads (small glowing dots) */
-    .thread-dot{fill:var(--gold);opacity:.9;filter:blur(.6px);transform-origin:center;animation:dotPulse 2.6s ease-in-out infinite}
-    @keyframes dotPulse{0%{transform:scale(.7);opacity:.6}50%{transform:scale(1.05);opacity:1}100%{transform:scale(.7);opacity:.6}}
-
-    /* -----------------------
-       PANELS / CONTENT
-       ----------------------- */
-    .panel{max-width:var(--max-width);margin:60px auto;padding:40px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);box-shadow:0 20px 50px rgba(0,0,0,.6);opacity:0;transform:translateY(22px) scale(.995);transition:all .9s var(--ease)}
-    .panel.visible{opacity:1;transform:none}
-    .panel h2{color:var(--gold);font-size:1.5rem;margin-bottom:10px}
-    .panel p{color:var(--muted);max-width:920px;margin:0 auto;line-height:1.8}
-
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
-    .card{padding:22px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,.01), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.03);min-height:140px;display:flex;flex-direction:column;justify-content:center;gap:8px;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
-    .card h3{color:var(--gold);margin:0}
-    .card p{color:var(--muted)}
-    .card:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(0,0,0,.6),0 6px 25px rgba(255,191,46,.06)}
-
-    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:16px}
-    .gallery-item{border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.03)}
-    .gallery-item img{width:100%;height:160px;object-fit:cover;transition:transform .45s var(--ease)}
-    .gallery-item img:hover{transform:scale(1.06)}
-
-    .social-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:12px}
-    .social-row a{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.02);color:var(--gold);border:1px solid rgba(255,191,46,.06);transition:transform .25s var(--ease)}
-    .social-row a:hover{transform:translateY(-6px);background:linear-gradient(90deg, rgba(255,191,46,.06), rgba(255,191,46,.02))}
-
-    footer.site-footer{padding:30px 20px;text-align:center;color:#bdbdbd}
-    footer .small{font-size:.95rem;color:var(--muted)}
-
-    /* responsive */
-    @media (max-width:900px){
-      header.navbar{padding:10px 14px}
-      .logo-img{width:44px;height:44px}
-      nav.nav{display:none}
-      .menu-toggle{display:inline-block}
-      .hero-inner{padding:20px}
+    /* ✨ Particle Background */
+    .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      top: 0; left: 0;
+      z-index: 0;
     }
-    @media (max-width:600px){
-      .hero-title{font-size:28px}
-      .hero-sub{font-size:14px}
-      .gallery-item img{height:120px}
-      .panel{margin:18px;padding:20px}
+    .particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: gold;
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: moveParticle 10s linear infinite;
     }
 
-    /* reduced motion */
-    @media (prefers-reduced-motion: reduce){
-      *{animation:none!important;transition:none!important}
-      .hero-bg-video{filter:brightness(.5)}
+    @keyframes moveParticle {
+      from { transform: translateY(0); opacity: 0.8; }
+      to { transform: translateY(-100vh); opacity: 0; }
+    }
+
+    /* 🌟 Sections */
+    section {
+      min-height: 100vh;
+      padding: 100px 10%;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .about, .gallery, .contact {
+      background: #0a0a0a;
+      border-top: 1px solid gold;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      border: 2px solid gold;
+      border-radius: 10px;
+      transition: transform 0.5s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px gold;
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid gold;
     }
   </style>
 </head>
 <body>
-  <!-- cinematic background layers -->
-  <div class="cinematic-bg" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
 
-  <!-- PRELOADER -->
-  <div id="preloader" role="status" aria-label="Loading Urban Cochi">
-    <img src="logo.png" alt="Urban Cochi logo" class="preloader-logo" />
-    <div class="preloader-text">URBAN COCHI</div>
-    <div class="preloader-bar" aria-hidden="true"></div>
-  </div>
-
-  <!-- NAV -->
-  <header class="navbar" role="navigation" aria-label="Main Navigation">
-    <div class="nav-left">
-      <img src="logo.png" alt="" aria-hidden="true" class="logo-img" />
-      <div>
-        <div class="brand-title">URBAN COCHI</div>
-        <div class="brand-sub">Every Thread Has a Story</div>
-      </div>
-    </div>
-
-    <nav class="nav" role="menubar" aria-label="Main menu">
-      <a href="#home" class="nav-link active" role="menuitem">Home</a>
-      <a href="#about" class="nav-link" role="menuitem">About</a>
-      <a href="#services" class="nav-link" role="menuitem">Services</a>
-      <a href="#gallery" class="nav-link" role="menuitem">Gallery</a>
-      <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+  <header>
+    <img src="images/logo.png" alt="Urban Cochi Logo" class="logo" />
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
     </nav>
-
-    <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu" onclick="toggleMobileMenu()">☰</button>
   </header>
 
-  <!-- HERO -->
-  <main>
-    <section id="home" class="hero" aria-label="Hero">
-      <div class="ribbon" aria-hidden="true"></div>
+  <section class="hero" id="home">
+    <div class="particles" id="particles"></div>
+    <h1>Every Thread Has a Story</h1>
+    <p>Corporate Uniforms • Wedding Customs • Premium Fashion</p>
+  </section>
 
-      <!-- thread SVG layer: soft flowing + dynamic waves -->
-      <div class="thread-layer" aria-hidden="true">
-        <svg class="thread-soft" width="2000" height="600" viewBox="0 0 2000 600" preserveAspectRatio="none" style="position:absolute;left:0;top:0;z-index:0">
-          <!-- long soft flowing threads (slow) -->
-          <g transform="translate(0,80)">
-            <path class="move" d="M-200 120 C 180 20, 420 240, 800 140 C 1180 40, 1460 220, 1900 120" stroke="rgba(255,215,120,0.06)" stroke-width="26" fill="none" />
-            <path class="thread-core move" d="M-200 120 C 180 20, 420 240, 800 140 C 1180 40, 1460 220, 1900 120" stroke="rgba(255,191,46,0.18)" stroke-linecap="round" fill="none" />
-          </g>
-          <g transform="translate(0,220)">
-            <path class="move" d="M-200 80 C 160 200, 520 -10, 880 100 C 1240 220, 1600 90, 2000 180" stroke="rgba(255,215,120,0.05)" stroke-width="20" fill="none" />
-            <path class="thread-core move" d="M-200 80 C 160 200, 520 -10, 880 100 C 1240 220, 1600 90, 2000 180" stroke="rgba(255,191,46,0.14)" stroke-linecap="round" fill="none" />
-          </g>
-        </svg>
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>Urban Cochi is a premium custom clothing brand based in Kochi. We specialize in corporate uniforms, designer wedding wear, and personalized tailoring solutions with cinematic style and finesse.</p>
+  </section>
 
-        <svg class="thread-dynamic" width="2000" height="600" viewBox="0 0 2000 600" preserveAspectRatio="none" style="position:absolute;left:0;top:0;z-index:0">
-          <!-- dynamic wave threads (more energetic) -->
-          <g transform="translate(0,340)">
-            <path class="wave" d="M-200 100 C 120 40, 420 200, 760 120 C 1100 40, 1400 180, 2000 110" stroke="rgba(255,191,46,0.16)" stroke-width="2" fill="none" />
-            <!-- moving dots -->
-            <circle class="thread-dot" cx="340" cy="88" r="3"/>
-            <circle class="thread-dot" cx="820" cy="98" r="3" style="animation-delay:.4s"/>
-            <circle class="thread-dot" cx="1260" cy="72" r="3" style="animation-delay:.8s"/>
-          </g>
-          <g transform="translate(0,420)">
-            <path class="wave" d="M-200 40 C 180 160, 540 -10, 860 70 C 1160 150, 1500 20, 2100 80" stroke="rgba(255,191,46,0.12)" stroke-width="1.2" fill="none" />
-            <circle class="thread-dot" cx="420" cy="55" r="2.5" style="animation-delay:.2s"/>
-            <circle class="thread-dot" cx="980" cy="45" r="2.8" style="animation-delay:.6s"/>
-          </g>
-        </svg>
-      </div>
+  <section class="gallery" id="gallery">
+    <h2>Our Creations</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery1.jpg" alt="Gallery 1">
+      <img src="images/gallery2.jpg" alt="Gallery 2">
+      <img src="images/gallery3.jpg" alt="Gallery 3">
+      <img src="images/gallery4.jpg" alt="Gallery 4">
+    </div>
+  </section>
 
-      <div class="hero-overlay" aria-hidden="true"></div>
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 7306316859 | 9061397002<br>
+       ✉️ theurbankochi@gmail.com</p>
+    <p>Follow us on Instagram, Facebook & Google Business.</p>
+  </section>
 
-      <div class="hero-inner" role="region" aria-labelledby="hero-heading">
-        <img src="logo.png" alt="Urban Cochi logo" class="hero-logo" />
-        <h1 id="hero-heading" class="hero-title">URBAN COCHI</h1>
-        <p class="hero-sub">Every Thread Has a Story — bespoke uniforms, couture and custom collaborations.</p>
-
-        <div class="hero-ctas">
-          <a href="#services" class="btn">Our Services</a>
-          <a href="#contact" class="btn btn-outline">Get in Touch</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="panel cinematic" aria-labelledby="about-heading">
-      <div class="panel-inner">
-        <h2 id="about-heading">About Urban Cochi</h2>
-        <p>Urban Cochi is a couture atelier and apparel studio based in Kochi. We craft premium uniforms, wedding couture, and limited-edition collections with careful fabric selection, expert tailoring and cinematic design direction.</p>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="panel cinematic" aria-labelledby="services-heading">
-      <div class="panel-inner">
-        <h2 id="services-heading">Services</h2>
-        <p>From concept and fabric sourcing to sampling, production and finishing — we offer end-to-end apparel services with premium quality and on-time delivery.</p>
-
-        <div class="grid">
-          <div class="card"><h3>Corporate Uniforms</h3><p>Brand-aligned, durable and stylish uniforms for hospitality and corporate.</p></div>
-          <div class="card"><h3>Wedding & Event Couture</h3><p>Bespoke couture with artisan details for weddings and special events.</p></div>
-          <div class="card"><h3>Custom Collections</h3><p>Limited-run fashion, prints, collaborations and product styling.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="panel cinematic" aria-labelledby="gallery-heading">
-      <div class="panel-inner">
-        <h2 id="gallery-heading">Gallery</h2>
-        <p>Selected works — replace the placeholder images with your product photos (high-res, well-lit images look best).</p>
-        <div class="gallery-grid">
-          <div class="gallery-item"><img src="gallery1.jpg" alt="Gallery image 1"></div>
-          <div class="gallery-item"><img src="gallery2.jpg" alt="Gallery image 2"></div>
-          <div class="gallery-item"><img src="gallery3.jpg" alt="Gallery image 3"></div>
-          <div class="gallery-item"><img src="gallery4.jpg" alt="Gallery image 4"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="panel cinematic" aria-labelledby="contact-heading">
-      <div class="panel-inner">
-        <h2 id="contact-heading">Connect With Us</h2>
-        <p>📞 <a href="tel:+917306316859">7306316859</a> | <a href="tel:+919061397002">9061397002</a><br>✉️ <a href="mailto:theurbankochi@gmail.com">theurbankochi@gmail.com</a></p>
-
-        <div class="social-row" aria-label="Social links">
-          <a href="https://www.instagram.com/urbancochi/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.youtube.com/@UrbanKochi" target="_blank" rel="noopener">YouTube</a>
-          <a href="https://in.pinterest.com/urbancochi/" target="_blank" rel="noopener">Pinterest</a>
-          <a href="https://urbancochi.blogspot.com/" target="_blank" rel="noopener">Blog</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer" role="contentinfo">
-    <img src="logo.png" alt="Urban Cochi" class="footer-logo" style="width:64px;display:block;margin:0 auto 10px" />
-    <div class="small">© <span id="year"></span> Urban Cochi · All rights reserved</div>
-    <div style="margin-top:6px"><a href="mailto:theurbankochi@gmail.com" style="color:var(--gold)">theurbankochi@gmail.com</a></div>
+  <footer>
+    © 2025 Urban Cochi — Designed with cinematic elegance.
   </footer>
 
-  <!-- =========================
-       SCRIPTS (animations, parallax, UI)
-       ========================= -->
   <script>
-    // auto year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // 🌟 Reveal sections on scroll
+    const sections = document.querySelectorAll("section");
+    const revealOnScroll = () => {
+      const trigger = window.innerHeight * 0.8;
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < trigger) sec.classList.add("visible");
+      });
+    };
+    window.addEventListener("scroll", revealOnScroll);
 
-    // PRELOADER
-    window.addEventListener('load', () => {
-      const pre = document.getElementById('preloader');
-      // allow short time for thread animation to appear
-      setTimeout(()=> pre.classList.add('hidden'), 900);
-    });
-
-    // NAVBAR scrolled state
-    const header = document.querySelector('.navbar');
-    function onScroll() {
-      header.classList.toggle('scrolled', window.scrollY > 40);
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-
-    // mobile menu
-    function toggleMobileMenu(){
-      const nav = document.querySelector('nav.nav');
-      const btn = document.querySelector('.menu-toggle');
-      const isOpen = nav.style.display === 'flex';
-      if(!isOpen){
-        nav.style.display = 'flex';
-        nav.style.flexDirection = 'column';
-        nav.style.position = 'absolute';
-        nav.style.right = '12px';
-        nav.style.top = '70px';
-        nav.style.background = 'linear-gradient(180deg, rgba(0,0,0,.96), rgba(0,0,0,.9))';
-        nav.style.padding = '12px';
-        nav.style.borderRadius = '10px';
-        btn.setAttribute('aria-expanded','true');
-      } else {
-        nav.style.display = '';
-        btn.setAttribute('aria-expanded','false');
-      }
+    // 🎬 Cinematic particles
+    const particleContainer = document.getElementById("particles");
+    for(let i=0; i<80; i++){
+      const p = document.createElement("div");
+      p.classList.add("particle");
+      p.style.left = Math.random() * 100 + "%";
+      p.style.animationDelay = Math.random() * 10 + "s";
+      p.style.animationDuration = 5 + Math.random()*10 + "s";
+      particleContainer.appendChild(p);
     }
 
-    // reveal animations with IntersectionObserver
-    const io = new IntersectionObserver((entries, obs) => {
-      entries.forEach(en => {
-        if(en.isIntersecting){
-          en.target.classList.add('visible');
-          obs.unobserve(en.target);
-        }
-      });
-    }, { threshold: 0.16 });
-    document.querySelectorAll('.cinematic, .panel, .card, .gallery-item').forEach(el => io.observe(el));
-
-    // thread dynamic subtle animations (JS-driven subtle time variance)
-    // apply slight random phase offsets to CSS animations for natural look
-    (function randomizeThreadTiming(){
-      const softPaths = document.querySelectorAll('.thread-soft .move');
-      softPaths.forEach((p,i)=>{
-        const dur = 14 + (i*2) + Math.random()*6;
-        p.style.animationDuration = dur + 's';
-        p.style.animationDelay = (Math.random()*1.2) + 's';
-      });
-      const waves = document.querySelectorAll('.thread-dynamic .wave');
-      waves.forEach((w,i)=>{
-        const d1 = 4.2 + Math.random()*2.8;
-        const d2 = 8 + Math.random()*4;
-        w.style.animationDuration = d1 + 's, ' + d2 + 's';
-        w.style.animationDelay = (Math.random()*1.6) + 's';
-      });
-      const dots = document.querySelectorAll('.thread-dot');
-      dots.forEach((d,i)=> d.style.animationDelay = (Math.random()*1.2)+'s');
-    })();
-
-    // parallax -> subtle translate of thread-layer when scrolling
-    const threadLayer = document.querySelector('.thread-layer');
-    function threadParallax(){
-      const t = Math.min(window.scrollY * 0.06, 120);
-      if(threadLayer) threadLayer.style.transform = translate3d(0, ${t}px, 0);
-    }
-    window.addEventListener('scroll', ()=> requestAnimationFrame(threadParallax), { passive:true });
-
-    // accessibility: close mobile nav on click outside
-    document.addEventListener('click', (e)=>{
-      const nav = document.querySelector('nav.nav');
-      const btn = document.querySelector('.menu-toggle');
-      if(!nav || !btn) return;
-      if(nav.contains(e.target) || btn.contains(e.target)) return;
-      if(window.innerWidth < 900 && nav.style.display === 'flex'){
-        nav.style.display = '';
-        btn.setAttribute('aria-expanded','false');
-      }
+    // 💫 Thread Parallax
+    const hero = document.querySelector(".hero");
+    window.addEventListener("scroll", () => {
+      const offset = window.scrollY * 0.2;
+      hero.style.backgroundPositionY = ${offset}px;
     });
   </script>
-
-  <!-- Analytics placeholder (replace with your ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());/* gtag('config','G-XXXXXXXXXX'); */</script>
 </body>
 </html>
