@@ -1,228 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ✅ Basic SEO -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Urban Cochi — Custom Clothing & Corporate Uniforms. Every thread has a story." />
-  <meta name="keywords" content="Urban Cochi, clothing brand, uniforms, fashion, Kochi, custom wear" />
-  <meta name="author" content="Urban Cochi" />
-  <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Urban Cochi | Premium Custom Clothing Brand in Kochi</title>
+  <meta name="description" content="Urban Cochi is a premium custom clothing and design studio in Kochi, Kerala. We create designer wear, uniforms, and artistic fashion stitched to perfection. You imagine, we create.">
+  <meta name="keywords" content="Urban Cochi, Urban Kochi, clothing brand in Kochi, Kerala fashion, custom uniforms, designer wear, printed T-shirts, Urban Cochi Kochi, custom fashion studio">
+  <meta name="author" content="Urban Cochi">
+  <meta name="robots" content="index, follow">
 
-  <!-- Open Graph for social media -->
-  <meta property="og:title" content="Urban Cochi – Every Thread Has a Story" />
-  <meta property="og:description" content="Corporate uniforms, premium wedding collections & custom fashion by Urban Cochi." />
-  <meta property="og:image" content="images/logo.png" />
-  <meta property="og:url" content="https://urbancochi.github.io/urbancochi/" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <!-- ✅ Google Site Verification -->
+  <meta name="google-site-verification" content="TcVqPRK4bRNlkF-Pp1hgvJNsPGEug-DMktkbAXR25p0" />
 
-  <title>Urban Cochi – Every Thread Has a Story</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* ✨ Basic Reset & Font */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: #fff;
-      background-color: #000;
-      overflow-x: hidden;
-    }
+  <!-- ✅ Open Graph / Social Sharing -->
+  <meta property="og:title" content="Urban Cochi | Premium Custom Clothing Brand in Kochi">
+  <meta property="og:description" content="Explore Urban Cochi — a premium custom clothing and design studio from Kochi. You imagine, we create.">
+  <meta property="og:image" content="https://urbancochi.github.io/urbancochi/logo.png">
+  <meta property="og:url" content="https://urbancochi.github.io/urbancochi/">
+  <meta property="og:type" content="website">
 
-    header {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(6px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 50px;
-    }
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Urban Cochi | Premium Custom Clothing Brand in Kochi">
+  <meta name="twitter:description" content="You imagine, we create. Explore our premium custom fashion studio in Kochi.">
+  <meta name="twitter:image" content="https://urbancochi.github.io/urbancochi/logo.png">
 
-    header img.logo {
-      height: 50px;
-      filter: drop-shadow(0 0 5px gold);
-    }
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" href="logo.png" />
 
-    nav a {
-      color: gold;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-    nav a:hover { color: white; text-shadow: 0 0 10px gold; }
-
-    /* 🎥 Hero Section */
-    .hero {
-      height: 100vh;
-      background: radial-gradient(ellipse at bottom, #1a1a1a 0%, #000 100%);
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      color: gold;
-      text-shadow: 0 0 15px gold;
-      animation: fadeDown 1.5s ease-out forwards;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-top: 15px;
-      color: #ddd;
-      opacity: 0;
-      animation: fadeUp 2s 1s forwards;
-    }
-
-    @keyframes fadeDown { from { opacity:0; transform:translateY(-40px);} to {opacity:1; transform:translateY(0);} }
-    @keyframes fadeUp { from {opacity:0; transform:translateY(40px);} to {opacity:1; transform:translateY(0);} }
-
-    /* ✨ Particle Background */
-    .particles {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      top: 0; left: 0;
-      z-index: 0;
-    }
-    .particle {
-      position: absolute;
-      width: 3px;
-      height: 3px;
-      background: gold;
-      border-radius: 50%;
-      opacity: 0.6;
-      animation: moveParticle 10s linear infinite;
-    }
-
-    @keyframes moveParticle {
-      from { transform: translateY(0); opacity: 0.8; }
-      to { transform: translateY(-100vh); opacity: 0; }
-    }
-
-    /* 🌟 Sections */
-    section {
-      min-height: 100vh;
-      padding: 100px 10%;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 1s ease-out;
-    }
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .about, .gallery, .contact {
-      background: #0a0a0a;
-      border-top: 1px solid gold;
-    }
-
-    .gallery img {
-      width: 100%;
-      max-width: 300px;
-      margin: 10px;
-      border: 2px solid gold;
-      border-radius: 10px;
-      transition: transform 0.5s;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px gold;
-    }
-
-    footer {
-      background: #000;
-      text-align: center;
-      padding: 20px;
-      border-top: 1px solid gold;
-    }
-  </style>
+  <!-- ✅ Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-  <header>
-    <img src="images/logo.png" alt="Urban Cochi Logo" class="logo" />
+<body>
+  <!-- ✅ NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="URBAN COCHI Logo" class="logo-img" />
+      <div class="brand">
+        <span class="brand-title">URBAN COCHI</span>
+        <span class="brand-tag">Where Every Thread Has a Story</span>
+      </div>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="custom.html">Custom Designs</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="hero" id="home">
-    <div class="particles" id="particles"></div>
-    <h1>Every Thread Has a Story</h1>
-    <p>Corporate Uniforms • Wedding Customs • Premium Fashion</p>
-  </section>
-
-  <section class="about" id="about">
-    <h2>About Us</h2>
-    <p>Urban Cochi is a premium custom clothing brand based in Kochi. We specialize in corporate uniforms, designer wedding wear, and personalized tailoring solutions with cinematic style and finesse.</p>
-  </section>
-
-  <section class="gallery" id="gallery">
-    <h2>Our Creations</h2>
-    <div class="gallery-grid">
-      <img src="images/gallery1.jpg" alt="Gallery 1">
-      <img src="images/gallery2.jpg" alt="Gallery 2">
-      <img src="images/gallery3.jpg" alt="Gallery 3">
-      <img src="images/gallery4.jpg" alt="Gallery 4">
+  <!-- ✅ CINEMATIC HERO -->
+  <section class="hero">
+    <div class="thread-bg"></div>
+    <img src="logo.png" alt="Urban Cochi Logo" class="hero-logo fade-in" />
+    <h1 class="hero-title fade-in delay-1">URBAN COCHI</h1>
+    <p class="hero-sub fade-in delay-2">Where Every Thread Has a Story</p>
+    <div class="hero-cta fade-in delay-3">
+      <a href="products.html" class="btn">Explore Products</a>
+      <a href="custom.html" class="btn btn-outline">Custom Designs</a>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>📞 7306316859 | 9061397002<br>
-       ✉️ theurbankochi@gmail.com</p>
-    <p>Follow us on Instagram, Facebook & Google Business.</p>
+  <!-- ✅ ABOUT SECTION -->
+  <section class="about reveal">
+    <div class="container">
+      <h2>About URBAN COCHI</h2>
+      <p>Urban Cochi is a luxury design and apparel studio blending art, craftsmanship, and individuality. We design uniforms, fashionwear, and creative custom apparel — every stitch defines your identity.</p>
+    </div>
   </section>
 
-  <footer>
-    © 2025 Urban Cochi — Designed with cinematic elegance.
+  <!-- ✅ GALLERY -->
+  <section class="gallery reveal">
+    <div class="container">
+      <h2>Our Creations</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="gallery1.jpg" alt="Urban Cochi Gallery 1"></div>
+        <div class="gallery-item"><img src="gallery2.jpg" alt="Urban Cochi Gallery 2"></div>
+        <div class="gallery-item"><img src="gallery3.jpg" alt="Urban Cochi Gallery 3"></div>
+        <div class="gallery-item"><img src="gallery4.jpg" alt="Urban Cochi Gallery 4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ SOCIALS -->
+  <section class="socials reveal">
+    <div class="container">
+      <h2>Follow Us Online</h2>
+      <p>Stay connected with Urban Cochi across platforms.</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/urbancochi/" target="_blank">📸 Instagram</a>
+        <a href="https://www.youtube.com/@UrbanKochi" target="_blank">▶️ YouTube</a>
+        <a href="https://in.pinterest.com/urbancochi/" target="_blank">📌 Pinterest</a>
+        <a href="https://urbancochi.blogspot.com/" target="_blank">📰 Blog</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-left">
+        <img src="logo.png" alt="URBAN COCHI" class="footer-logo" />
+        <p class="small">© <span id="year"></span> Urban Cochi · All rights reserved</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:theurbankochi@gmail.com" class="email-link">theurbankochi@gmail.com</a>
+      </div>
+    </div>
   </footer>
 
-  <script>
-    // 🌟 Reveal sections on scroll
-    const sections = document.querySelectorAll("section");
-    const revealOnScroll = () => {
-      const trigger = window.innerHeight * 0.8;
-      sections.forEach(sec => {
-        const top = sec.getBoundingClientRect().top;
-        if(top < trigger) sec.classList.add("visible");
-      });
-    };
-    window.addEventListener("scroll", revealOnScroll);
-
-    // 🎬 Cinematic particles
-    const particleContainer = document.getElementById("particles");
-    for(let i=0; i<80; i++){
-      const p = document.createElement("div");
-      p.classList.add("particle");
-      p.style.left = Math.random() * 100 + "%";
-      p.style.animationDelay = Math.random() * 10 + "s";
-      p.style.animationDuration = 5 + Math.random()*10 + "s";
-      particleContainer.appendChild(p);
-    }
-
-    // 💫 Thread Parallax
-    const hero = document.querySelector(".hero");
-    window.addEventListener("scroll", () => {
-      const offset = window.scrollY * 0.2;
-      hero.style.backgroundPositionY = ${offset}px;
-    });
-  </script>
+  <!-- ✅ JAVASCRIPT -->
+  <script src="script.js"></script>
 </body>
 </html>
-
-
