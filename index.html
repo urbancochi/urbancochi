@@ -12,24 +12,10 @@
   <meta name="author" content="Urban Cochi" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Google verification (kept as requested) -->
-  <meta name="google-site-verification" content="TcVqP…
-[12:21 pm, 5/11/2025] Aswin: <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- ===== BASIC / SEO / GOOGLE ===== -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Urban Cochi | Every Thread Has a Story</title>
-  <meta name="description" content="Urban Cochi — premium custom clothing & couture from Kochi. Corporate uniforms, wedding couture, and bespoke designs." />
-  <meta name="keywords" content="Urban Cochi, Kochi, custom clothing, uniforms, wedding couture, designer wear" />
-  <meta name="author" content="Urban Cochi" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Google site verification -->
+  <!-- Google verification (kept) -->
   <meta name="google-site-verification" content="TcVqPRK4bRNlkF-Pp1hgvJNsPGEug-DMktkbAXR25p0" />
 
-  <!-- Open Graph -->
+  <!-- SOCIAL / OG -->
   <meta property="og:title" content="Urban Cochi | Every Thread Has a Story" />
   <meta property="og:description" content="Premium custom clothing & couture from Kochi. You imagine, we create." />
   <meta property="og:image" content="https://urbancochi.github.io/urbancochi/logo.png" />
@@ -37,46 +23,218 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":["Organization","LocalBusiness"],
-        "name":"Urban Cochi",
-        "url":"https://urbancochi.github.io/urbancochi/",
-        "logo":"https://urbancochi.github.io/urbancochi/logo.png",
-        "description":"Urban Cochi is a premium custom clothing and design studio in Kochi, Kerala.",
-        "address":{"@type":"PostalAddress","addressLocality":"Kochi","addressRegion":"Kerala","postalCode":"682030","addressCountry":"IN"},
-        "contactPoint":{"@type":"ContactPoint","telephone":"+91-7306316859","contactType":"Customer Service","areaServed":"IN"}
-      }
-    ]
-  }
-  </script>
-
-  <!-- Favicon -->
+  <!-- favicon -->
   <link rel="icon" href="logo.png" />
 
-  <!-- Fonts (optional; keep for nicer UI) -->
+  <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- =========================
+       STYLES (INLINE)
+       ========================= -->
+  <style>
+    :root{
+      --bg-dark:#050505;
+      --panel:#0f0f0f;
+      --gold:#ffbf2e;
+      --gold-30: rgba(255,191,46,0.18);
+      --muted:#cfcfcf;
+      --glass: rgba(255,255,255,0.03);
+      --max-width:1150px;
+      --radius:14px;
+      --ease: cubic-bezier(.2,.9,.3,1);
+    }
+
+    /* reset */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, #080808 0%, #050505 60%);
+      color:#fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      overflow-x:hidden;
+      line-height:1.5;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* -----------------------
+       PRELOADER
+       ----------------------- */
+    #preloader{
+      position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+      background:linear-gradient(180deg,#000,#070707);z-index:99999;gap:18px;transition:opacity .9s var(--ease),visibility .9s var(--ease)
+    }
+    #preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+    .preloader-logo{width:120px;filter:drop-shadow(0 0 22px rgba(255,191,46,.45))}
+    .preloader-text{color:var(--gold);font-weight:700;letter-spacing:4px;font-size:18px;text-shadow:0 0 18px rgba(255,191,46,.25)}
+    .preloader-bar{width:120px;height:4px;border-radius:4px;background:linear-gradient(90deg, transparent, var(--gold), transparent);animation:pre-bar 1.6s linear infinite;box-shadow:0 0 18px rgba(255,191,46,.12)}
+    @keyframes pre-bar{0%{transform:translateX(-60px);opacity:.5}50%{transform:translateX(0);opacity:1}100%{transform:translateX(60px);opacity:.5}}
+
+    /* -----------------------
+       NAVBAR
+       ----------------------- */
+    header.navbar{
+      position:fixed;left:0;right:0;top:0;z-index:1200;
+      display:flex;align-items:center;justify-content:space-between;padding:12px 24px;background:linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.25));backdrop-filter:blur(6px);
+      border-bottom:1px solid rgba(255,255,255,0.03);transition: background .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    header.navbar.scrolled{background: linear-gradient(180deg, rgba(0,0,0,.95), rgba(0,0,0,.9));box-shadow: 0 10px 40px rgba(0,0,0,.6)}
+    .nav-left{display:flex;align-items:center;gap:12px}
+    .logo-img{width:48px;height:48px;border-radius:12px;box-shadow:0 6px 30px rgba(255,191,46,.12)}
+    .brand-title{font-weight:700;color:var(--gold);letter-spacing:1px}
+    .brand-sub{font-size:.8rem;color:var(--muted);margin-top:2px}
+
+    nav.nav{display:flex;gap:18px;align-items:center}
+    nav.nav a{color:#fff;padding:8px 10px;border-radius:8px;transition:background .25s var(--ease),color .25s var(--ease)}
+    nav.nav a:hover{background:var(--glass);color:var(--gold)}
+    nav.nav a.active{color:var(--gold);background:linear-gradient(90deg, rgba(255,191,46,.04), transparent)}
+    .menu-toggle{display:none;font-size:22px;cursor:pointer;color:var(--muted)}
+
+    /* -----------------------
+       CINEMATIC BACKGROUND (fabric texture + particle lights)
+       ----------------------- */
+    /* subtle fabric texture via layered noise-ish gradients */
+    .cinematic-bg {
+      position:fixed;inset:0;z-index:-2;pointer-events:none;
+      background:
+        radial-gradient(1200px 600px at 10% 15%, rgba(255,191,46,0.02), transparent 6%),
+        radial-gradient(1000px 500px at 85% 80%, rgba(255,191,46,0.01), transparent 6%),
+        linear-gradient(180deg,#060606 0%, #050505 40%, #020202 100%);
+      opacity:1;mix-blend-mode:multiply;
+    }
+    /* very subtle moving grain overlay (simulate fabric sheen) */
+    .grain {
+      position:fixed;inset:0;z-index:-1;opacity:.06;background-image:radial-gradient(circle, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size: 6px 6px; animation:grainMove 20s linear infinite;
+    }
+    @keyframes grainMove{from{transform:translateY(0)}to{transform:translateY(60px)}}
+
+    /* -----------------------
+       HERO (with animated threads SVG)
+       ----------------------- */
+    .hero{
+      min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:80px 20px 40px;text-align:center;overflow:hidden;
+    }
+
+    /* ribbon / light */
+    .ribbon{
+      position:absolute;right:-8%;top:56%;width:420px;height:420px;border-radius:50%;
+      background: conic-gradient(from 200deg, rgba(255,191,46,0.06), transparent 20%);
+      transform:translate3d(0,-50%,0) rotate(-12deg);z-index:0;filter:blur(25px);pointer-events:none;
+    }
+
+    /* thread-layer container sits on top of video/background */
+    .thread-layer{
+      position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;
+    }
+
+    /* hero inner content */
+    .hero-inner{position:relative;z-index:2;max-width:1080px;padding:40px;display:flex;flex-direction:column;align-items:center;gap:18px}
+    .hero-logo{width:150px;border-radius:18px;box-shadow:0 30px 60px rgba(0,0,0,.6), 0 0 30px rgba(255,191,46,.14)}
+    .hero-title{font-size: clamp(28px, 5vw, 56px); color:var(--gold); letter-spacing:4px; font-weight:700; text-shadow:0 6px 28px rgba(255,191,46,.12)}
+    .hero-sub{color:var(--muted);font-size:clamp(14px, 1.6vw, 18px);margin-top:2px;max-width:820px}
+    .hero-ctas{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;font-weight:600;background:linear-gradient(90deg,var(--gold), #ffd77a);color:#0b0b0b;box-shadow:0 10px 30px rgba(255,191,46,.14);transition: transform .25s var(--ease), box-shadow .25s var(--ease)}
+    .btn:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(255,191,46,.22)}
+    .btn-outline{background:transparent;border:1.5px solid rgba(255,191,46,.18);color:var(--gold);backdrop-filter:blur(6px)}
+
+    /* -----------------------
+       THREAD SVG styles
+       ----------------------- */
+    /* slow, soft flowing thread (long, subtle) */
+    .thread-soft path{stroke:rgba(255,215,120,0.12);stroke-width:2;fill:none;stroke-linecap:round;filter:blur(.4px)}
+    .thread-soft path.thread-core{stroke:var(--gold);stroke-width:1.2;opacity:.9;mix-blend-mode:screen}
+    .thread-soft .move{animation:softFlow 18s linear infinite}
+
+    @keyframes softFlow{
+      0%{transform:translateX(-2%);}
+      50%{transform:translateX(2%);}
+      100%{transform:translateX(-2%);}
+    }
+
+    /* dynamic thread waves */
+    .thread-dynamic path{stroke:rgba(255,215,120,0.18);stroke-width:1.5;fill:none;stroke-linecap:round;opacity:.8}
+    .thread-dynamic path.wave{stroke:var(--gold);stroke-width:1.2;opacity:1;filter:drop-shadow(0 0 8px rgba(255,191,46,.12))}
+
+    /* wave motion using stroke-dashoffset and transform */
+    .thread-dynamic .wave{stroke-dasharray:1200;stroke-dashoffset:1200;animation:waveDraw 4.6s linear infinite, waveShift 9s linear infinite}
+    @keyframes waveDraw{0%{stroke-dashoffset:1200}50%{stroke-dashoffset:600}100%{stroke-dashoffset:1200}}
+    @keyframes waveShift{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+
+    /* micro-particles along threads (small glowing dots) */
+    .thread-dot{fill:var(--gold);opacity:.9;filter:blur(.6px);transform-origin:center;animation:dotPulse 2.6s ease-in-out infinite}
+    @keyframes dotPulse{0%{transform:scale(.7);opacity:.6}50%{transform:scale(1.05);opacity:1}100%{transform:scale(.7);opacity:.6}}
+
+    /* -----------------------
+       PANELS / CONTENT
+       ----------------------- */
+    .panel{max-width:var(--max-width);margin:60px auto;padding:40px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);box-shadow:0 20px 50px rgba(0,0,0,.6);opacity:0;transform:translateY(22px) scale(.995);transition:all .9s var(--ease)}
+    .panel.visible{opacity:1;transform:none}
+    .panel h2{color:var(--gold);font-size:1.5rem;margin-bottom:10px}
+    .panel p{color:var(--muted);max-width:920px;margin:0 auto;line-height:1.8}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
+    .card{padding:22px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,.01), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.03);min-height:140px;display:flex;flex-direction:column;justify-content:center;gap:8px;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+    .card h3{color:var(--gold);margin:0}
+    .card p{color:var(--muted)}
+    .card:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(0,0,0,.6),0 6px 25px rgba(255,191,46,.06)}
+
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:16px}
+    .gallery-item{border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.03)}
+    .gallery-item img{width:100%;height:160px;object-fit:cover;transition:transform .45s var(--ease)}
+    .gallery-item img:hover{transform:scale(1.06)}
+
+    .social-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+    .social-row a{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.02);color:var(--gold);border:1px solid rgba(255,191,46,.06);transition:transform .25s var(--ease)}
+    .social-row a:hover{transform:translateY(-6px);background:linear-gradient(90deg, rgba(255,191,46,.06), rgba(255,191,46,.02))}
+
+    footer.site-footer{padding:30px 20px;text-align:center;color:#bdbdbd}
+    footer .small{font-size:.95rem;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:900px){
+      header.navbar{padding:10px 14px}
+      .logo-img{width:44px;height:44px}
+      nav.nav{display:none}
+      .menu-toggle{display:inline-block}
+      .hero-inner{padding:20px}
+    }
+    @media (max-width:600px){
+      .hero-title{font-size:28px}
+      .hero-sub{font-size:14px}
+      .gallery-item img{height:120px}
+      .panel{margin:18px;padding:20px}
+    }
+
+    /* reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      *{animation:none!important;transition:none!important}
+      .hero-bg-video{filter:brightness(.5)}
+    }
+  </style>
 </head>
 <body>
-  <!-- ===== PRELOADER ===== -->
+  <!-- cinematic background layers -->
+  <div class="cinematic-bg" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- PRELOADER -->
   <div id="preloader" role="status" aria-label="Loading Urban Cochi">
     <img src="logo.png" alt="Urban Cochi logo" class="preloader-logo" />
     <div class="preloader-text">URBAN COCHI</div>
     <div class="preloader-bar" aria-hidden="true"></div>
   </div>
 
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar" role="navigation" aria-label="Primary">
+  <!-- NAV -->
+  <header class="navbar" role="navigation" aria-label="Main Navigation">
     <div class="nav-left">
       <img src="logo.png" alt="" aria-hidden="true" class="logo-img" />
-      <div class="brand">
+      <div>
         <div class="brand-title">URBAN COCHI</div>
         <div class="brand-sub">Every Thread Has a Story</div>
       </div>
@@ -93,14 +251,41 @@
     <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu" onclick="toggleMobileMenu()">☰</button>
   </header>
 
-  <!-- ===== HERO (Video + Parallax) ===== -->
+  <!-- HERO -->
   <main>
     <section id="home" class="hero" aria-label="Hero">
       <div class="ribbon" aria-hidden="true"></div>
 
-      <video class="hero-bg-video" autoplay muted loop playsinline aria-hidden="true">
-        <source src="https://cdn.jsdelivr.net/gh/urbanwebassets/videos/fabric-motion.mp4" type="video/mp4" />
-      </video>
+      <!-- thread SVG layer: soft flowing + dynamic waves -->
+      <div class="thread-layer" aria-hidden="true">
+        <svg class="thread-soft" width="2000" height="600" viewBox="0 0 2000 600" preserveAspectRatio="none" style="position:absolute;left:0;top:0;z-index:0">
+          <!-- long soft flowing threads (slow) -->
+          <g transform="translate(0,80)">
+            <path class="move" d="M-200 120 C 180 20, 420 240, 800 140 C 1180 40, 1460 220, 1900 120" stroke="rgba(255,215,120,0.06)" stroke-width="26" fill="none" />
+            <path class="thread-core move" d="M-200 120 C 180 20, 420 240, 800 140 C 1180 40, 1460 220, 1900 120" stroke="rgba(255,191,46,0.18)" stroke-linecap="round" fill="none" />
+          </g>
+          <g transform="translate(0,220)">
+            <path class="move" d="M-200 80 C 160 200, 520 -10, 880 100 C 1240 220, 1600 90, 2000 180" stroke="rgba(255,215,120,0.05)" stroke-width="20" fill="none" />
+            <path class="thread-core move" d="M-200 80 C 160 200, 520 -10, 880 100 C 1240 220, 1600 90, 2000 180" stroke="rgba(255,191,46,0.14)" stroke-linecap="round" fill="none" />
+          </g>
+        </svg>
+
+        <svg class="thread-dynamic" width="2000" height="600" viewBox="0 0 2000 600" preserveAspectRatio="none" style="position:absolute;left:0;top:0;z-index:0">
+          <!-- dynamic wave threads (more energetic) -->
+          <g transform="translate(0,340)">
+            <path class="wave" d="M-200 100 C 120 40, 420 200, 760 120 C 1100 40, 1400 180, 2000 110" stroke="rgba(255,191,46,0.16)" stroke-width="2" fill="none" />
+            <!-- moving dots -->
+            <circle class="thread-dot" cx="340" cy="88" r="3"/>
+            <circle class="thread-dot" cx="820" cy="98" r="3" style="animation-delay:.4s"/>
+            <circle class="thread-dot" cx="1260" cy="72" r="3" style="animation-delay:.8s"/>
+          </g>
+          <g transform="translate(0,420)">
+            <path class="wave" d="M-200 40 C 180 160, 540 -10, 860 70 C 1160 150, 1500 20, 2100 80" stroke="rgba(255,191,46,0.12)" stroke-width="1.2" fill="none" />
+            <circle class="thread-dot" cx="420" cy="55" r="2.5" style="animation-delay:.2s"/>
+            <circle class="thread-dot" cx="980" cy="45" r="2.8" style="animation-delay:.6s"/>
+          </g>
+        </svg>
+      </div>
 
       <div class="hero-overlay" aria-hidden="true"></div>
 
@@ -116,44 +301,34 @@
       </div>
     </section>
 
-    <!-- ===== ABOUT ===== -->
+    <!-- ABOUT -->
     <section id="about" class="panel cinematic" aria-labelledby="about-heading">
       <div class="panel-inner">
         <h2 id="about-heading">About Urban Cochi</h2>
-        <p>Urban Cochi is a design studio & couture atelier in Kochi. We specialize in premium uniforms, wedding couture, and bespoke fashion — delivering concept to finished garment with craft-led precision and cinematic aesthetics.</p>
+        <p>Urban Cochi is a couture atelier and apparel studio based in Kochi. We craft premium uniforms, wedding couture, and limited-edition collections with careful fabric selection, expert tailoring and cinematic design direction.</p>
       </div>
     </section>
 
-    <!-- ===== SERVICES ===== -->
+    <!-- SERVICES -->
     <section id="services" class="panel cinematic" aria-labelledby="services-heading">
       <div class="panel-inner">
         <h2 id="services-heading">Services</h2>
-        <p>End-to-end apparel solutions: design, fabric sourcing, pattern & sample, production, finishing, and styling.</p>
+        <p>From concept and fabric sourcing to sampling, production and finishing — we offer end-to-end apparel services with premium quality and on-time delivery.</p>
 
         <div class="grid">
-          <div class="card">
-            <h3>Corporate Uniforms</h3>
-            <p>Durable, branded, and smart uniforms for hospitality, corporate and retail.</p>
-          </div>
-          <div class="card">
-            <h3>Wedding & Event Couture</h3>
-            <p>Artisan-made bespoke garments with luxurious detailing for weddings and premium events.</p>
-          </div>
-          <div class="card">
-            <h3>Custom Collections</h3>
-            <p>Small-run fashion, limited editions, collaborative design services and prints.</p>
-          </div>
+          <div class="card"><h3>Corporate Uniforms</h3><p>Brand-aligned, durable and stylish uniforms for hospitality and corporate.</p></div>
+          <div class="card"><h3>Wedding & Event Couture</h3><p>Bespoke couture with artisan details for weddings and special events.</p></div>
+          <div class="card"><h3>Custom Collections</h3><p>Limited-run fashion, prints, collaborations and product styling.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ===== GALLERY ===== -->
+    <!-- GALLERY -->
     <section id="gallery" class="panel cinematic" aria-labelledby="gallery-heading">
       <div class="panel-inner">
         <h2 id="gallery-heading">Gallery</h2>
-        <p>Selected works — clean images are recommended. Replace placeholders with your product photos.</p>
-        <div class="gallery-grid" aria-hidden="false">
-          <!-- Replace these srcs with your images -->
+        <p>Selected works — replace the placeholder images with your product photos (high-res, well-lit images look best).</p>
+        <div class="gallery-grid">
           <div class="gallery-item"><img src="gallery1.jpg" alt="Gallery image 1"></div>
           <div class="gallery-item"><img src="gallery2.jpg" alt="Gallery image 2"></div>
           <div class="gallery-item"><img src="gallery3.jpg" alt="Gallery image 3"></div>
@@ -162,12 +337,11 @@
       </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
+    <!-- CONTACT -->
     <section id="contact" class="panel cinematic" aria-labelledby="contact-heading">
       <div class="panel-inner">
         <h2 id="contact-heading">Connect With Us</h2>
-        <p>📞 <a href="tel:+917306316859">7306316859</a> | <a href="tel:+919061397002">9061397002</a><br>
-           ✉️ <a href="mailto:theurbankochi@gmail.com">theurbankochi@gmail.com</a></p>
+        <p>📞 <a href="tel:+917306316859">7306316859</a> | <a href="tel:+919061397002">9061397002</a><br>✉️ <a href="mailto:theurbankochi@gmail.com">theurbankochi@gmail.com</a></p>
 
         <div class="social-row" aria-label="Social links">
           <a href="https://www.instagram.com/urbancochi/" target="_blank" rel="noopener">Instagram</a>
@@ -179,27 +353,36 @@
     </section>
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
-    <div class="footer-inner">
-      <img src="logo.png" alt="Urban Cochi" class="footer-logo" />
-      <div class="small">© <span id="year"></span> Urban Cochi · All rights reserved</div>
-      <div><a href="mailto:theurbankochi@gmail.com" class="footer-mail">theurbankochi@gmail.com</a></div>
-    </div>
+    <img src="logo.png" alt="Urban Cochi" class="footer-logo" style="width:64px;display:block;margin:0 auto 10px" />
+    <div class="small">© <span id="year"></span> Urban Cochi · All rights reserved</div>
+    <div style="margin-top:6px"><a href="mailto:theurbankochi@gmail.com" style="color:var(--gold)">theurbankochi@gmail.com</a></div>
   </footer>
 
-  <!-- ===== SCRIPTS (vanilla JS) ===== -->
+  <!-- =========================
+       SCRIPTS (animations, parallax, UI)
+       ========================= -->
   <script>
-    // Year
+    // auto year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Preloader hide
+    // PRELOADER
     window.addEventListener('load', () => {
       const pre = document.getElementById('preloader');
+      // allow short time for thread animation to appear
       setTimeout(()=> pre.classList.add('hidden'), 900);
     });
 
-    // Mobile menu toggle
+    // NAVBAR scrolled state
+    const header = document.querySelector('.navbar');
+    function onScroll() {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // mobile menu
     function toggleMobileMenu(){
       const nav = document.querySelector('nav.nav');
       const btn = document.querySelector('.menu-toggle');
@@ -210,7 +393,7 @@
         nav.style.position = 'absolute';
         nav.style.right = '12px';
         nav.style.top = '70px';
-        nav.style.background = 'linear-gradient(180deg, rgba(0,0,0,.95), rgba(0,0,0,.9))';
+        nav.style.background = 'linear-gradient(180deg, rgba(0,0,0,.96), rgba(0,0,0,.9))';
         nav.style.padding = '12px';
         nav.style.borderRadius = '10px';
         btn.setAttribute('aria-expanded','true');
@@ -220,15 +403,7 @@
       }
     }
 
-    // Navbar scrolled class
-    const header = document.querySelector('.navbar');
-    function onScroll(){
-      if(window.scrollY > 40) header.classList.add('scrolled'); else header.classList.remove('scrolled');
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-
-    // Intersection observer: reveal panels/cards
+    // reveal animations with IntersectionObserver
     const io = new IntersectionObserver((entries, obs) => {
       entries.forEach(en => {
         if(en.isIntersecting){
@@ -237,19 +412,38 @@
         }
       });
     }, { threshold: 0.16 });
-
     document.querySelectorAll('.cinematic, .panel, .card, .gallery-item').forEach(el => io.observe(el));
 
-    // Parallax: gentle video translate
-    const video = document.querySelector('.hero-bg-video');
-    function parallax(){
-      const sc = window.scrollY;
-      if(video) video.style.transform = translate3d(0, ${Math.min(sc * 0.08, 110)}px, 0) scale(1.02);
-    }
-    window.addEventListener('scroll', () => requestAnimationFrame(parallax), { passive:true });
+    // thread dynamic subtle animations (JS-driven subtle time variance)
+    // apply slight random phase offsets to CSS animations for natural look
+    (function randomizeThreadTiming(){
+      const softPaths = document.querySelectorAll('.thread-soft .move');
+      softPaths.forEach((p,i)=>{
+        const dur = 14 + (i*2) + Math.random()*6;
+        p.style.animationDuration = dur + 's';
+        p.style.animationDelay = (Math.random()*1.2) + 's';
+      });
+      const waves = document.querySelectorAll('.thread-dynamic .wave');
+      waves.forEach((w,i)=>{
+        const d1 = 4.2 + Math.random()*2.8;
+        const d2 = 8 + Math.random()*4;
+        w.style.animationDuration = d1 + 's, ' + d2 + 's';
+        w.style.animationDelay = (Math.random()*1.6) + 's';
+      });
+      const dots = document.querySelectorAll('.thread-dot');
+      dots.forEach((d,i)=> d.style.animationDelay = (Math.random()*1.2)+'s');
+    })();
 
-    // Close mobile nav on outside click
-    document.addEventListener('click', (e) => {
+    // parallax -> subtle translate of thread-layer when scrolling
+    const threadLayer = document.querySelector('.thread-layer');
+    function threadParallax(){
+      const t = Math.min(window.scrollY * 0.06, 120);
+      if(threadLayer) threadLayer.style.transform = translate3d(0, ${t}px, 0);
+    }
+    window.addEventListener('scroll', ()=> requestAnimationFrame(threadParallax), { passive:true });
+
+    // accessibility: close mobile nav on click outside
+    document.addEventListener('click', (e)=>{
       const nav = document.querySelector('nav.nav');
       const btn = document.querySelector('.menu-toggle');
       if(!nav || !btn) return;
@@ -261,14 +455,8 @@
     });
   </script>
 
-  <!-- Analytics placeholder (replace G-XXXXXXXXXX with your GA id) -->
+  <!-- Analytics placeholder (replace with your ID) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    // gtag('config', 'G-XXXXXXXXXX');
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());/* gtag('config','G-XXXXXXXXXX'); */</script>
 </body>
-</html
-
+</html>
