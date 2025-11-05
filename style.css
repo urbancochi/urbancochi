@@ -192,3 +192,16 @@ section p {
   .menu-toggle { display: block; }
   .hero-title { font-size: 1.8rem; }
 }
+.gallery img {
+  width: 100%;
+  max-width: 250px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05) rotateY(10deg);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
+}
