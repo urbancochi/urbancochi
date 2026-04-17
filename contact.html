@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ✅ SEO Meta Tags for Contact Page -->
-<title>Urban Cochi | Contact Our Kochi Fashion Studio</title>
-
-<meta name="description" content="Get in touch with Urban Cochi — Kochi's custom clothing and fashion studio. Reach us for designer wear, uniforms, or creative clothing ideas.">
-
-<meta name="keywords" content="Urban Cochi contact, Urban Cochi Kochi contact, clothing brand Kochi, contact Urban Cochi, custom fashion Kerala">
-
-<meta name="author" content="Urban Cochi">
-<meta name="robots" content="index, follow">
-
-<!-- ✅ Open Graph -->
-<meta property="og:title" content="Urban Cochi | Contact Us">
-<meta property="og:description" content="Contact Urban Cochi for premium designer clothing and uniforms from Kochi. You imagine, we create.">
-<meta property="og:image" content="https://urbancochi.github.io/urbancochi/logo.png">
-<meta property="og:url" content="https://urbancochi.github.io/urbancochi/contact.html">
-<meta property="og:type" content="website">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Contact | URBAN COCHI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Urban Cochi | Contact Our Kochi Fashion Studio</title>
+  <meta name="description" content="Get in touch with Urban Cochi — Kochi's custom clothing and fashion studio.">
+  <meta name="keywords" content="Urban Cochi contact, Kochi clothing brand, custom fashion Kerala">
+  <meta name="author" content="Urban Cochi">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Urban Cochi | Contact Us">
+  <meta property="og:description" content="Contact Urban Cochi for premium designer clothing and uniforms.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:url" content="https://urbancochi.github.io/urbancochi/contact.html">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts + CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar">
-    <div class="logo">
-      <img src="logo.png" alt="URBAN COCHI Logo" class="logo-img" />
+    <div class="nav-left">
+      <img src="logo.png" alt="Urban Cochi Logo" class="logo-img">
       <div class="brand">
-        <span class="brand-title">URBAN COCHI</span>
-        <span class="brand-tag">Where Every Thread Has a Story</span>
+        <h1>Urban Cochi</h1>
+        <p>Every Thread Has a Story</p>
       </div>
     </div>
-    <div class="menu-toggle" aria-label="menu" onclick="toggleMenu()">☰</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -46,36 +48,46 @@
     </nav>
   </header>
 
-  <!-- CONTACT SECTION -->
-  <section class="contact cinematic">
+  <!-- CONTACT -->
+  <section class="contact">
     <div class="container">
       <h2>Get in Touch</h2>
-      <p>Let’s bring your designs to life. Whether it’s uniforms, custom wear, or creative projects — we’re just a message away.</p>
+      <p>Let’s bring your ideas to life — uniforms, custom wear, or creative fashion projects.</p>
 
       <div class="contact-grid">
+
+        <!-- INFO -->
         <div class="contact-info">
           <p>📞 <a href="tel:+917306316859">+91 73063 16859</a></p>
           <p>📧 <a href="mailto:theurbankochi@gmail.com">theurbankochi@gmail.com</a></p>
           <p>📸 <a href="https://instagram.com/urbancochi" target="_blank">@urbancochi</a></p>
         </div>
 
+        <!-- FORM -->
         <form class="contact-form" action="https://formspree.io/f/xwkggzqo" method="POST">
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Email" required>
           <textarea name="message" rows="5" placeholder="Your Message"></textarea>
           <button type="submit" class="btn">Send Message</button>
         </form>
+
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <p>© <span id="year"></span> URBAN COCHI · All Rights Reserved</p>
+    <p>© <span id="year"></span> Urban Cochi</p>
   </footer>
 
+  <!-- JS -->
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    function toggleMenu(){document.querySelector('.nav-links').classList.toggle('active');}
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("active");
+    }
   </script>
+
 </body>
 </html>
