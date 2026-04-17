@@ -1,24 +1,56 @@
-// enter gallery
-document.getElementById('enterGallery').addEventListener('click', ()=>{
-  document.getElementById('flashIntro').style.display = 'none';
-  document.getElementById('galleryMain').classList.remove('hidden');
-});
+// ENTER GALLERY
+const enterBtn = document.getElementById("enterGallery");
+const intro = document.getElementById("flashIntro");
+const main = document.getElementById("galleryMain");
 
-// lightbox
-const figs = document.querySelectorAll('.grid figure');
-const lb = document.getElementById('lightbox');
-const lbImg = document.getElementById('lbImg');
-const lbCap = document.getElementById('lbCaption');
-const lbClose = document.getElementById('lbClose');
-
-figs.forEach(f=>{
-  f.addEventListener('click', ()=>{
-    const img = f.querySelector('img').src;
-    const cap = f.querySelector('figcaption').innerText;
-    lbImg.src = img; lbCap.textContent = cap;
-    lb.classList.add('show');
+if (enterBtn && intro && main) {
+  enterBtn.addEventListener("click", () => {
+    intro.style.display = "none";
+    main.classList.remove("hidden");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
-});
+}
 
-lbClose.addEventListener('click', ()=> lb.classList.remove('show'));
-lb.addEventListener('click', (e)=>{ if(e.target===lb) lb.classList.remove('show') });
+// LIGHTBOX
+const figures = document.querySelectorAll(".grid figure");
+const lightbox = document.getElementById("lightbox");
+const lbImg = document.getElementById("lbImg");
+const lbCap = document.getElementById("lbCaption");
+const lbClose = document.getElementById("lbClose");
+
+if (figures.length && lightbox && lbImg) {
+  figures.forEach(fig => {
+    fig.addEventListener("click", () => {
+      const img = fig.querySelector("img");
+      const cap = fig.querySelector("figcaption");
+
+      lbImg.src = img.src;
+      lbCap.textContent = cap ? cap.textContent : "";
+
+      lightbox.classList.add("show");
+    });
+  });
+}
+
+// CLOSE BUTTON
+if (lbClose) {
+  lbClose.addEventListener("click", () => {
+    lightbox.classList.remove("show");
+  });
+}
+
+// CLICK OUTSIDE CLOSE
+if (lightbox) {
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("show");
+    }
+  });
+}
+
+// ESC KEY CLOSE (pro touch 🔥)
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    lightbox.classList.remove("show");
+  }
+});
