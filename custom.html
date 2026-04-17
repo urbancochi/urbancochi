@@ -1,76 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ✅ SEO Meta Tags for Custom Designs Page -->
-<title>Urban Cochi | Custom Design Studio in Kochi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Urban Cochi lets you design your own clothing — we create custom uniforms, fashion pieces, and printed wear tailored exactly to your vision.">
+  <!-- SEO -->
+  <title>Urban Cochi | Custom Design Studio in Kochi</title>
+  <meta name="description" content="Design your own clothing with Urban Cochi. Custom uniforms, fashion pieces and premium garments made in Kochi.">
+  <meta name="keywords" content="custom clothing Kochi, Urban Cochi design, uniform design Kerala">
+  <meta name="author" content="Urban Cochi">
+  <meta name="robots" content="index, follow">
 
-<meta name="keywords" content="Urban Cochi custom design, Urban Cochi Kochi, custom clothing Kerala, design your outfit, uniform design, fashion studio Kochi">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Urban Cochi | Custom Clothing Studio">
+  <meta property="og:description" content="You imagine, we create. Premium custom clothing from Kochi.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:url" content="https://urbancochi.github.io/urbancochi/custom.html">
+  <meta property="og:type" content="website">
 
-<meta name="author" content="Urban Cochi">
-<meta name="robots" content="index, follow">
-
-<!-- ✅ Open Graph -->
-<meta property="og:title" content="Urban Cochi | Custom Clothing Studio">
-<meta property="og:description" content="Create your own style with Urban Cochi. You imagine, we create — premium clothing design studio in Kochi.">
-<meta property="og:image" content="https://urbancochi.github.io/urbancochi/logo.png">
-<meta property="og:url" content="https://urbancochi.github.io/urbancochi/custom.html">
-<meta property="og:type" content="website">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Urban Cochi — Custom Designs</title>
-  <link rel="stylesheet" href="custom.css" />
+  <link rel="stylesheet" href="custom.css">
 </head>
+
 <body>
 
-  <!-- seam-draw intro -->
+  <!-- INTRO -->
   <div id="seam-intro" class="seam-intro">
-    <svg class="seam-svg" viewBox="0 0 800 120" preserveAspectRatio="xMidYMid meet">
-      <path id="seamPath" d="M20,60 C200,0 400,120 780,60" stroke="#ffcc33" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <svg class="seam-svg" viewBox="0 0 800 120">
+      <path id="seamPath" d="M20,60 C200,0 400,120 780,60" stroke="#ffcc33" stroke-width="4" fill="none"/>
     </svg>
+
     <div class="seam-content">
-      <img src="logo.png" alt="Urban Cochi logo" />
+      <img src="logo.png" alt="Urban Cochi logo">
       <h1>Design Your Vision</h1>
-      <p>Custom garments — tell us your idea and we'll make it reality</p>
-      <button id="enterBtn" class="enter-btn">Start Designing</button>
+      <p>Tell us your idea — we’ll craft it into reality</p>
+      <button id="enterBtn" class="btn primary">Start Designing</button>
     </div>
   </div>
 
-  <!-- main custom form -->
+  <!-- MAIN -->
   <main id="customMain" class="hidden">
-    <nav class="nav">
-      <a href="index.html" class="nav-left"><img src="logo.png" alt="logo" /></a>
-      <div class="nav-right">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <img src="logo.png" alt="logo">
+
+      <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
+    <!-- FORM -->
     <section class="designer">
       <h2>Custom Design Request</h2>
-      <p class="lead">Fill details below — attach reference images and our team will contact you.</p>
+      <p class="lead">Share your idea — we’ll contact you shortly.</p>
 
-      <form id="customForm" class="form" enctype="multipart/form-data">
+      <form class="form" action="https://formspree.io/f/xwkggzqo" method="POST" enctype="multipart/form-data">
+
         <label>
-          Your name
-          <input type="text" name="name" required />
+          Your Name
+          <input type="text" name="name" required>
         </label>
 
         <label>
-          Phone number
-          <input type="tel" name="phone" placeholder="+91..." required />
+          Phone Number
+          <input type="tel" name="phone" required>
         </label>
 
         <label>
           Email
-          <input type="email" name="email" placeholder="you@example.com" />
+          <input type="email" name="email">
         </label>
 
         <label>
-          Product type
+          Product Type
           <select name="product">
             <option>Printed T-shirt</option>
             <option>Exclusive T-shirt</option>
@@ -81,26 +86,36 @@
         </label>
 
         <label>
-          Describe your idea
-          <textarea name="notes" rows="4" placeholder="Colors, text, placement, sizes..."></textarea>
+          Describe Your Idea
+          <textarea name="message" rows="4"></textarea>
         </label>
 
-        <label class="file-label">
-          Upload reference image
-          <input type="file" name="refImage" accept="image/*" />
-          <span class="file-hint">PNG / JPG (max 8MB)</span>
+        <label>
+          Upload Reference Image
+          <input type="file" name="file">
         </label>
 
         <div class="actions">
           <button type="submit" class="btn primary">Send Request</button>
-          <a class="btn ghost" href="https://wa.me/917306316859?text=Hi%20Urban%20Cochi%2C%20I%20want%20a%20custom%20design" target="_blank">Enquire on WhatsApp</a>
+          <a href="https://wa.me/917306316859" target="_blank" class="btn ghost">WhatsApp</a>
         </div>
 
-        <p class="privacy">We will contact you — your details are safe with us.</p>
       </form>
     </section>
+
   </main>
 
-  <script src="custom.js"></script>
+  <!-- JS -->
+  <script>
+    const btn = document.getElementById("enterBtn");
+    const intro = document.getElementById("seam-intro");
+    const main = document.getElementById("customMain");
+
+    btn.addEventListener("click", () => {
+      intro.style.display = "none";
+      main.classList.remove("hidden");
+    });
+  </script>
+
 </body>
 </html>
